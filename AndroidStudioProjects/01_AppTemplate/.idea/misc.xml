@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3828125" />
         <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/layout/content_main2.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/layout/fragment_first.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/layout/fragment_second.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/01_AppTemplate/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3828125" />
       </map>
     </option>
   </component>
