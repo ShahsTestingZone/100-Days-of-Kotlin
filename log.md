@@ -1,5 +1,23 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 5: November 20th, 2021 (Saturday)
+
+**Today's Progress**: 
+
+Yesterday I forgot to update the repo but I have now added the update. Today I completed Lesson 2.2 
+I extended the AboutMe app to add user interaction. I added a nickname field, a DONE button, and a text view to display the nickname. 
+Once the user enters a nickname and taps the DONE button, 
+Now the text view updates to show the entered nickname. 
+
+
+### Day 4: November 19th, 2021 (Friday)
+
+**Today's Progress**: 
+
+Today I completed Lesson 2.1 which is a section on 'Linear layout using the Layout Editor'. I learnt about storing different Resources Values within
+res>values folder e.g. dimensions, style and how to use the scrollable feature within a view.
+The project i worked on this section is called 'About Me'.
+  
 
 ### Day 3: November 18th, 2021 (Thursday)
 
@@ -20,7 +38,7 @@ Spent some time today building out my github profile and learning how to using G
 
 I also started the Android Kotlin Fundamentals Course, completing Lessons 1.0 and 1.1.
 
-### Day 0: November 16th, 2021 (Tuesday)
+### Day 1: November 16th, 2021 (Tuesday)
 
 **Today's Progress**: 
 
