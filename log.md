@@ -1,5 +1,18 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 6: November 22th, 2021 (Monday)
+
+**Today's Progress**: 
+
+Today I completed section 2.3 which went over constraint layouts. I developed a new app that went over basic constraints, chain constraints and baseline constraints.
+
+The code in the project used the same click handler to change the colour of different text views through user interaction e.g. views being tapped 
+or when specific buttons are pressed. 
+
+The project I worked on this section is called 'Color my views'.
+
+
+
 ### Day 5: November 20th, 2021 (Saturday)
 
 **Today's Progress**: 
