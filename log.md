@@ -11,6 +11,7 @@ or when specific buttons are pressed.
 
 The project I worked on this section is called 'Color my views'.
 
+Also completed section 2.4 on Data Binding Basics - The About Me app from 2.1 was adapted to use databinding. 
 
 
 ### Day 5: November 20th, 2021 (Saturday)
