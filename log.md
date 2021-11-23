@@ -1,6 +1,23 @@
 # 100 Days Of Code (Kotlin) - Log
 
-### Day 6: November 22th, 2021 (Monday)
+
+### Day 7: November 23rd, 2021 (Tuesday)
+
+**Today's Progress**:
+Today I completed section 3.1 and 3.2. The first section was on creating a fragment and the second sectin was using an example app and creating
+ a navigation graph for fragments using the navigation library and the Navigation Editor.
+I added a navigation using the options menu, then implemented an Up button so that the user can navigate back to the title screen
+ from anywhere in the app. Finally I added a navigation drawer menu.
+ 
+ The provided app in 3.2 required alot of updates to make the project work with the lesson. 
+ - update Gradle from 4 to 7, Kotlin, Java 1.7 to 1.8, respositories Jcenter to Maven Central. 
+ - Add to default Config {multiDexEnabled true}
+ - Add to dependencies - implementation 'com.android.support:multidex:1.0.3' 
+ - in activity_main change the fragment<> to fragmentContainerView
+ - In Android Manifesto add the following 'android:exported="true"' within the activity <>
+ - Use support fragment manager to find myNavHostFragment in Main Activity to then get navController, using .findNavController() function does not work in onCreate. 
+
+### Day 6: November 22nd, 2021 (Monday)
 
 **Today's Progress**: 
 
