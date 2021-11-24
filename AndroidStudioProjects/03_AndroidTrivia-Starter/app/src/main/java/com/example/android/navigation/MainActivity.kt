@@ -37,9 +37,13 @@ class MainActivity : AppCompatActivity() {
         //initialise the burger menu
         drawerLayout = binding.drawerLayout
 
-//                val navController = this.findNavController(R.id.myNavHostFragment) // This does not work use below
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
-        val navController = navHostFragment.navController
+        // The findNavController only works when using fragment<> and NOT FragmentContainerView in activity_main xml.
+        //an error shows up in activity_main asking you to switch to fragment container view.
+        val navController = this.findNavController(R.id.myNavHostFragment)
+
+        //The below works for Fragment Container View - referring to container in activity_main
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
+//        val navController = navHostFragment.navController
 
         //Add Up button on AppBar, second part for set up navigation drawer - with the burger menu on AppBar - third parameter
         NavigationUI.setupActionBarWithNavController(this,navController, drawerLayout)
@@ -49,12 +53,13 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)
-//        use below two lines as back up
+
+//        use below two lines if using fragment container view.
 //        val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
 //        val navController = navHostFragment.navController
 
 
-//        use this if only adding Up button
+//        use this if only adding an Up button
 //        return navController.navigateUp()
         // use below if using navigation drawer
         return NavigationUI.navigateUp(navController, drawerLayout)
