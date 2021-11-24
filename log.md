@@ -1,10 +1,17 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 8: November 24th, 2021 (Wednesday)
+
+**Today's Progress**:
+Today I completed section 3.3. In this codelab, I updated the AndroidTrivia app so that users can send their game results to 
+other apps and share their results with friends. The first part involved using Safe Args ( by adding dependencies) in order to pass arguments between fragments (using NavDirections classes).
+ The second section involves sharing the game results by adding another menu option containing the share icon and using Implicit Intents to send information to other apps.
+
 
 ### Day 7: November 23rd, 2021 (Tuesday)
 
 **Today's Progress**:
-Today I completed section 3.1 and 3.2. The first section was on creating a fragment and the second section was using an example app and creating
+Today I completed section 3.1 and 3.2. The first section was on creating a fragment and the second section was using an example app (AndroidTrivia) and creating
  a navigation graph for fragments using the navigation library and the Navigation Editor.
 I added a navigation using the options menu, then implemented an Up button so that the user can navigate back to the title screen
  from anywhere in the app. Finally I added a navigation drawer menu.
