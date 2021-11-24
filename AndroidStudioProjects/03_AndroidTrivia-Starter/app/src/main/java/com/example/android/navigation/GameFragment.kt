@@ -65,7 +65,7 @@ class GameFragment : Fragment() {
     private val numQuestions = Math.min((questions.size + 1) / 2, 3)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
 
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
@@ -101,15 +101,24 @@ class GameFragment : Fragment() {
                     } else {
                         // We've won!  Navigate to the gameWonFragment.
                         view.findNavController()
-                            .navigate(R.id.action_gameFragment_to_gameWonFragment)
+                            .navigate(GameFragmentDirections
+                                .actionGameFragmentToGameWonFragment(numQuestions,questionIndex))
+                             //previously used to be below but now we are passing parameters between fragments and need to use the above.
+//                            .navigate(R.id.action_gameFragment_to_gameWonFragment)
+
+
                     }
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
-                    view.findNavController().
-                    navigate(R.id.action_gameFragment_to_gameOverFragment)
+                    view.findNavController()
+//                    navigate(R.id.action_gameFragment_to_gameOverFragment)
+                        .navigate(GameFragmentDirections.
+                        actionGameFragmentToGameOverFragment())
                 }
             }
         }
+
+
         return binding.root
     }
 
