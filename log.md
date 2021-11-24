@@ -4,7 +4,7 @@
 ### Day 7: November 23rd, 2021 (Tuesday)
 
 **Today's Progress**:
-Today I completed section 3.1 and 3.2. The first section was on creating a fragment and the second sectin was using an example app and creating
+Today I completed section 3.1 and 3.2. The first section was on creating a fragment and the second section was using an example app and creating
  a navigation graph for fragments using the navigation library and the Navigation Editor.
 I added a navigation using the options menu, then implemented an Up button so that the user can navigate back to the title screen
  from anywhere in the app. Finally I added a navigation drawer menu.
