@@ -1,5 +1,18 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 9: November 26th, 2021 (Thursday)
+
+**Today's Progress**:
+Today I focused on section 4.1 and 4.2 Lifecycles and Logging. 
+
+I modified a starter app called DessertClicker to add logging information that's displayed in the Logcat.
+I used override lifecycle callback methods and logged changes to the activity state.
+I learnt about the lifecycle for activities and how they work with lifecycles of fragments. 
+I modified the app to use the Timber library for logging - https://github.com/JakeWharton/timber#download.
+ Finally i learnt how to use the Android lifecycle library to shift lifecycle control 
+from the activity or fragment to the actual component that needs to be lifecycle-aware making it easier to decouple code. 
+
+
 ### Day 8: November 24th, 2021 (Wednesday)
 
 **Today's Progress**:
