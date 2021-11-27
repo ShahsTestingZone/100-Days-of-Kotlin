@@ -1,6 +1,18 @@
 # 100 Days Of Code (Kotlin) - Log
 
-### Day 9: November 26th, 2021 (Thursday)
+### Day 10: November 27th, 2021 (Saturday)
+
+**Today's Progress**:
+Today I focused on section 5.1 focusing on View Models. 
+- I learnt what MVVM (model-view-viewmodel) architectural pattern is and why we want to retain UI data through device-configuration changes using ViewModel.
+  Note: there is a limitation of data that onSavedInstanceState can hold, a viewModel is more flexible. 
+- I also learnt how to create a parameterized constructor for a ViewModel using the ViewModelFactory interface. Aswell as understanding
+ when the factory method design pattern should be used and how to use it.
+ Note: When you need the data right away when the viewModel is initialized. Instead of initilising variables within the viewmodel after it has been created. 
+
+ The project I worked on this section is called 'Guess the word'.
+ 
+### Day 9: November 26th, 2021 (Friday)
 
 **Today's Progress**:
 Today I focused on section 4.1 and 4.2 Lifecycles and Logging. 
