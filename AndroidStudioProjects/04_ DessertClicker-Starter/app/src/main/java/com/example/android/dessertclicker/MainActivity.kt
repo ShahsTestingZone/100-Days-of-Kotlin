@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Timber.i("onCreate Called")
 
-        //Initiate Desert Timer Class
+        //Initiate Desert Timer Class - connect it to follow the life cycle of this activity
         dessertTimer = DessertTimer(this.lifecycle)
 
         //restore bundle from onSaveInstanceState if there is one

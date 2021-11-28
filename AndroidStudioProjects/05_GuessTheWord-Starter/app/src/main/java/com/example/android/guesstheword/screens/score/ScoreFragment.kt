@@ -17,14 +17,16 @@
 package com.example.android.guesstheword.screens.score
 
 import android.os.Bundle
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.navArgs
+import androidx.navigation.fragment.NavHostFragment
+
 import com.example.android.guesstheword.R
 import com.example.android.guesstheword.databinding.ScoreFragmentBinding
 
@@ -54,8 +56,24 @@ class ScoreFragment : Fragment() {
         //Initialise ViewModel Part 2
         viewModelFactory = ScoreViewModelFactory(ScoreFragmentArgs.fromBundle(requireArguments()).score)
         viewModel = ViewModelProvider(this, viewModelFactory)[ScoreViewModel::class.java]
+        // Add observer for score
 
-        binding.scoreText.text = viewModel.score.toString()
+        viewModel.score.observe(viewLifecycleOwner, { newScore ->
+            binding.scoreText.text = newScore.toString()
+        })
+//        binding.scoreText.text = viewModel.score.toString() // using the live data model
+
+        // Navigates back to game when button is pressed
+        viewModel.eventPlayAgain.observe(viewLifecycleOwner, { playAgain ->
+            if (playAgain) {
+                NavHostFragment.findNavController(this).navigate(ScoreFragmentDirections.actionRestart())
+                viewModel.onPlayAgainComplete()
+            }
+        })
+
+       binding.playAgainButton.setOnClickListener {  viewModel.onPlayAgain()  }
+      // the above is the switch to then make the observer aware something has changed.
+
 //        Log.d (TAG, "Final Score of score2 is ${viewModel.score2}")
 
         return binding.root
@@ -66,7 +84,7 @@ class ScoreFragment : Fragment() {
 *Note: In this app, it's not necessary to add a ViewModelFactory for the ScoreViewModel, because you can assign the
 * score directly to the viewModel.score variable after you have initialisedn it.
 *
-*For example 
+*For example
 * viewModel.finalScore = ScoreFragmentArgs.fromBundle(requireArguments()).score
 * //remove the constructor in the view model so its empty)
 * class ScoreViewModel(): ViewModel()

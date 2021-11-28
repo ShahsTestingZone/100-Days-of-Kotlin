@@ -24,11 +24,21 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.android.guesstheword.R
 import com.example.android.guesstheword.databinding.GameFragmentBinding
+
+/*Why use viewLifecycleOwner?
+Fragment views get destroyed when a user navigates away from a fragment, even though the fragment itself is not destroyed.
+This essentially creates two lifecycles, the lifecycle of the fragment, and the lifecycle of the fragment's view.
+Referring to the fragment's lifecycle instead of the fragment view's lifecycle can cause subtle bugs when updating the fragment's view.
+Therefore, when setting up observers that affect the fragment's view you should:
+1. Set up the observers in onCreateView()
+2. Pass in viewLifecycleOwner to observers
+*/
 
 private const val TAG = "GameFragment"
 
@@ -59,36 +69,63 @@ class GameFragment : Fragment() {
         Log.d(TAG, "Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this)[GameViewModel::class.java]
 
+        // Setting up the live data part 3
+        //add Observer (view(of)Lifecycle) Object to the LiveData object
+        /** Setting up LiveData observation relationship **/
+        viewModel.score.observe(viewLifecycleOwner, { newScore ->
+            binding.scoreText.text = newScore.toString()
+        })
+        viewModel.word.observe(viewLifecycleOwner, { newWord ->
+            binding.wordText.text = newWord
+        })
+        // Observer for the Game finished event
+        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer<Boolean> { hasFinished ->
+            if (hasFinished) gameFinished()
+        })
+        /*
+        * Usually, LiveData delivers updates to the observers only when data changes.
+        * An exception to this behavior is that observers also receive updates when the observer changes from an inactive to an active state.
+        * This is why the game-finished toast is triggered repeatedly in your app. When the game fragment is re-created after a screen rotation,
+        * it moves from an inactive to an active state.
+        * The observer in the fragment is re-connected to the existing ViewModel and receives the current data.
+        * The gameFinished() method is re-triggered via the next steps in the init block, and the toast displays.
+        *
+        *
+        * */
+
+
         binding.correctButton.setOnClickListener { onCorrect() }
         binding.skipButton.setOnClickListener { onSkip() }
         binding.endGameButton.setOnClickListener { onEndGame() }
 
-        updateScoreText()
-        updateWordText()
+//        updateScoreText()
+//        updateWordText()
         return binding.root
     }
     /** Methods for updating the UI **/
+    //Below code is now longer required since we updated the code to use live data and observe and act on
+    // any changes and update the view.
 
-    private fun updateWordText() {
-        binding.wordText.text = viewModel.word
-    }
+//    private fun updateWordText() {
+//        binding.wordText.text = viewModel.word.value
+//    }
 
-    private fun updateScoreText() {
-        binding.scoreText.text = viewModel.score.toString()
-    }
+//    private fun updateScoreText() {
+//        binding.scoreText.text = viewModel.score.value.toString()
+//    }
 
     /** Methods for buttons presses **/
 
     private fun onSkip() {
         viewModel.onSkip()
-        updateWordText()
-        updateScoreText()
+//        updateWordText() // not needed as we are using live data observes.
+//        updateScoreText()
     }
 
     private fun onCorrect() {
         viewModel.onCorrect()
-        updateScoreText()
-        updateWordText()
+//        updateScoreText()
+//        updateWordText()
 
     }
 
@@ -102,8 +139,9 @@ class GameFragment : Fragment() {
     private fun gameFinished() {
         Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()
         val action = GameFragmentDirections.actionGameToScore()
-        action.score = viewModel.score
+        action.score = viewModel.score.value?:0
         NavHostFragment.findNavController(this).navigate(action)
+        viewModel.onGameFinishComplete()
 
     }
 }
