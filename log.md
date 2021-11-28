@@ -1,5 +1,19 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 11: November 28th, 2021 (Sunday)
+
+**Today's Progress**:
+Today I focused on section 5.2 on LiveData and LiveData Observers. 
+
+I updated the 'Guess the word' app to use LiveData, this way the variables in the viewmodel can only be accessed as read only by external classes. 
+
+I learnt about Encapsulation and then used the kotlin backing property method to make changes to the variables e.g. score and word.
+ 
+Understanding the code for this project was difficult at first but became more interesting as I found different ways to trigger the observers 
+e.g. using a button (attached to a  listener) to then   trigger a function in the view model which updates a LiveData<Boolean> function. 
+ which can then trigger something else in your Activity or Fragment as the observer now been re-triggered. 
+ 
+
 ### Day 10: November 27th, 2021 (Saturday)
 
 **Today's Progress**:
