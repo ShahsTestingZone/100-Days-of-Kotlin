@@ -1,18 +1,30 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 12: November 29th, 2021 (Monday)
+
+**Today's Progress**:
+Today I focused on section 5.3: Data binding with ViewModel and Live Data. 
+I updated the app for 'Guess the word' and added the below elements. 
+- I learnt how to integrate ViewModel with data binding.
+- I learnt how to integrate LiveData with data binding.
+- I learnt how to use listener bindings to replace the click listeners in a fragment.
+- I learnt how to add string formatting to data-binding expressions.
+
+The project I worked on this section is called 'Guess the word'.
+
+
 ### Day 11: November 28th, 2021 (Sunday)
 
 **Today's Progress**:
-Today I focused on section 5.2 on LiveData and LiveData Observers. 
-
-I updated the 'Guess the word' app to use LiveData, this way the variables in the viewmodel can only be accessed as read only by external classes. 
-
-I learnt about Encapsulation and then used the kotlin backing property method to make changes to the variables e.g. score and word.
+Today I focused on section 5.2: LiveData and LiveData Observers. 
+- I updated the 'Guess the word' app to use LiveData, this way the variables in the viewmodel can only be accessed as read only by external classes. 
+- I learnt about Encapsulation and then used the kotlin backing property method to make changes to the variables e.g. score and word.
  
 Understanding the code for this project was difficult at first but became more interesting as I found different ways to trigger the observers 
 e.g. using a button (attached to a  listener) to then   trigger a function in the view model which updates a LiveData<Boolean> function. 
  which can then trigger something else in your Activity or Fragment as the observer now been re-triggered. 
  
+The project I worked on this section is called 'Guess the word'.
 
 ### Day 10: November 27th, 2021 (Saturday)
 
@@ -24,75 +36,89 @@ Today I focused on section 5.1 focusing on View Models.
  when the factory method design pattern should be used and how to use it.
  Note: When you need the data right away when the viewModel is initialized. Instead of initilising variables within the viewmodel after it has been created. 
 
- The project I worked on this section is called 'Guess the word'.
+The project I worked on this section is called 'Guess the word'.
  
 ### Day 9: November 26th, 2021 (Friday)
 
 **Today's Progress**:
-Today I focused on section 4.1 and 4.2 Lifecycles and Logging. 
+Today I focused on section 4.1 Lifecycles and Logging.
+and 4.2 Complex lifecycle situations 
 
-I modified a starter app called DessertClicker to add logging information that's displayed in the Logcat.
-I used override lifecycle callback methods and logged changes to the activity state.
-I learnt about the lifecycle for activities and how they work with lifecycles of fragments. 
-I modified the app to use the Timber library for logging - https://github.com/JakeWharton/timber#download.
- Finally i learnt how to use the Android lifecycle library to shift lifecycle control 
+- I modified a starter app called DessertClicker to add logging information that's displayed in the Logcat.
+- I used override lifecycle callback methods and logged changes to the activity state.
+- I learnt about the lifecycle for activities and how they work with lifecycles of fragments. 
+- I modified the app to use the Timber library for logging - https://github.com/JakeWharton/timber#download.
+- Finally i learnt how to use the Android lifecycle library to shift lifecycle control 
 from the activity or fragment to the actual component that needs to be lifecycle-aware making it easier to decouple code. 
 
+The project I worked on this section is called 'DessertClicker'.
 
 ### Day 8: November 24th, 2021 (Wednesday)
 
 **Today's Progress**:
-Today I completed section 3.3. In this codelab, I updated the AndroidTrivia app so that users can send their game results to 
-other apps and share their results with friends. The first part involved using Safe Args ( by adding dependencies) in order to pass arguments between fragments (using NavDirections classes).
- The second section involves sharing the game results by adding another menu option containing the share icon and using Implicit Intents to send information to other apps.
+Today I completed section 3.3: Start an external activity (SafeArgs and Implicit Intent).
+-  In this codelab, I updated the AndroidTrivia app so that users can send their game results to other apps and share their results with friends. 
+- The first part involved using Safe Args (by adding dependencies) in order to pass arguments between fragments (using NavDirections classes).
+- The second section involved sharing the game results by adding another menu option containing the share icon and using Implicit Intents to send information to other apps.
 
+The project I worked on this section is called 'AndroidTrivia app'.
 
 ### Day 7: November 23rd, 2021 (Tuesday)
 
 **Today's Progress**:
-Today I completed section 3.1 and 3.2. The first section was on creating a fragment and the second section was using an example app (AndroidTrivia) and creating
- a navigation graph for fragments using the navigation library and the Navigation Editor.
-I added a navigation using the options menu, then implemented an Up button so that the user can navigate back to the title screen
- from anywhere in the app. Finally I added a navigation drawer menu.
+Today I completed section 3.1: Create a Fragment
+- The first section was on creating a fragment
+
+I also completed section 3.2: Define navigation paths. 
+- I used an example app (AndroidTrivia) and created a navigation graph for fragments using the navigation library and the Navigation Editor.
+- I added a navigation using the options menu, then implemented an Up button so that the user can navigate back to the title screen
+ from anywhere in the app. 
+- Finally I added a navigation drawer menu.
  
  The provided app in 3.2 required alot of updates to make the project work with the lesson. 
  - update Gradle from 4 to 7, Kotlin, Java 1.7 to 1.8, respositories Jcenter to Maven Central. 
  - Add to default Config {multiDexEnabled true}
  - Add to dependencies - implementation 'com.android.support:multidex:1.0.3' 
- - in activity_main change the fragment<> to fragmentContainerView
+ - in activity_main change the fragment<> to fragmentContainerView (had to change back to use NavHostFragment)
  - In Android Manifesto add the following 'android:exported="true"' within the activity <>
  - Use support fragment manager to find myNavHostFragment in Main Activity to then get navController, using .findNavController() function does not work in onCreate. 
+
+The project I worked on this section is called 'AndroidTrivia App'.
 
 ### Day 6: November 22nd, 2021 (Monday)
 
 **Today's Progress**: 
 
-Today I completed section 2.3 which went over constraint layouts. I developed a new app that went over basic constraints, chain constraints and baseline constraints.
-
-The code in the project used the same click handler to change the colour of different text views through user interaction e.g. views being tapped 
+Today I completed section 2.3: Constraint layouts using the Layout Editior. 
+- I developed a new app that went over basic constraints, chain constraints and baseline constraints.
+- The code in the project used the same click handler to change the colour of different text views through user interaction e.g. views being tapped 
 or when specific buttons are pressed. 
 
 The project I worked on this section is called 'Color my views'.
 
-Also completed section 2.4 on Data Binding Basics - The About Me app from 2.1 was adapted to use databinding. 
+Also completed section 2.4: Data Binding Basics.
+ - The About Me app from 2.1 was adapted to use very basic databinding. 
 
+The project I worked on this section is called 'About Me'.
 
 ### Day 5: November 20th, 2021 (Saturday)
 
 **Today's Progress**: 
 
-Yesterday I forgot to update the repo but I have now added the update. Today I completed Lesson 2.2 
-I extended the AboutMe app to add user interaction. I added a nickname field, a DONE button, and a text view to display the nickname. 
-Once the user enters a nickname and taps the DONE button, 
-Now the text view updates to show the entered nickname. 
+Today I completed Lesson 2.2: Add user interactivity.
+- I extended an existing app and added a nickname field, a DONE button, and a text view to display the nickname. 
 
+Once the user enters a nickname and taps the DONE button,the text view updates to show the entered nickname. 
+
+The project i worked on this section is called 'About Me'.
 
 ### Day 4: November 19th, 2021 (Friday)
 
 **Today's Progress**: 
 
-Today I completed Lesson 2.1 which is a section on 'Linear layout using the Layout Editor'. I learnt about storing different Resources Values within
-res>values folder e.g. dimensions, style and how to use the scrollable feature within a view.
+Today I completed Lesson 2.1:Linear layout using the Layout Editor.
+- I learnt about storing different Resources Values within res>values folder e.g. dimensions, style and how to use the scrollable feature within a view.
+
 The project i worked on this section is called 'About Me'.
   
 
@@ -100,9 +126,9 @@ The project i worked on this section is called 'About Me'.
 
 **Today's Progress**: 
 
-Today I completed the remaining sections in Lesson 1: Build your first app. I went over basic app anatomy, layouts, image resources and compatibility. 
-
-I created 2 basic apps using simple code logic; Dice Roller and another app using the Basic Template.
+Today I completed the remaining sections in Lesson 1: Build your first app. 
+- I went over basic app anatomy, layouts, image resources and compatibility. 
+- I created 2 basic apps using simple code logic; Dice Roller and another app using the Basic Template.
 
 Having done android before, the course hasn't gone into anything new but i do like the refresher on layouts and understanding better code solutions to challenges given in the course.  
 
