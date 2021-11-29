@@ -1,0 +1,103 @@
+/*
+ * Copyright (C) 2019 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.example.android.guesstheword.screens.score
+
+import android.os.Bundle
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
+
+import com.example.android.guesstheword.R
+import com.example.android.guesstheword.databinding.ScoreFragmentBinding
+
+private const val TAG = "Score Fragment"
+/**
+ * Fragment where the final score is shown, after the game is over
+ */
+class ScoreFragment : Fragment() {
+
+    // ViewModel - Part 1
+    private lateinit var viewModel: ScoreViewModel
+    private lateinit var viewModelFactory: ScoreViewModelFactory
+
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View {
+
+        // Inflate view and obtain an instance of the binding class.
+        val binding: ScoreFragmentBinding = DataBindingUtil.inflate(
+                inflater,
+                R.layout.score_fragment,
+                container,
+                false
+        )
+        //Initialise ViewModel Part 2
+        viewModelFactory = ScoreViewModelFactory(ScoreFragmentArgs.fromBundle(requireArguments()).score)
+        viewModel = ViewModelProvider(this, viewModelFactory)[ScoreViewModel::class.java]
+        // Add observer for score
+
+        // LiveData to databinding method use on line 80 so the below is not required
+//        viewModel.score.observe(viewLifecycleOwner, { newScore ->
+//            binding.scoreText.text = newScore.toString()
+//        })
+//        binding.scoreText.text = viewModel.score.toString() // using the live data model
+
+        // Navigates back to game when button is pressed
+        viewModel.eventPlayAgain.observe(viewLifecycleOwner, { playAgain ->
+            if (playAgain) {
+                NavHostFragment.findNavController(this).navigate(ScoreFragmentDirections.actionRestart())
+                viewModel.onPlayAgainComplete()
+            }
+        })
+
+        //ViewModel DataBinding
+        binding.scoreViewModel = viewModel
+
+        // Specify the fragment view as the lifecycle owner of the binding.
+        // This is used so that the binding can observe LiveData updates
+        binding.lifecycleOwner = viewLifecycleOwner
+
+        // not required as we have now added ViewModel DataBinding
+//       binding.playAgainButton.setOnClickListener {  viewModel.onPlayAgain()  }
+      // the above is the switch to then make the observer aware something has changed.
+
+//        Log.d (TAG, "Final Score of score2 is ${viewModel.score2}")
+
+        return binding.root
+    }
+}
+
+/*
+*Note: In this app, it's not necessary to add a ViewModelFactory for the ScoreViewModel, because you can assign the
+* score directly to the viewModel.score variable after you have initialisedn it.
+*
+*For example
+* viewModel.finalScore = ScoreFragmentArgs.fromBundle(requireArguments()).score
+* //remove the constructor in the view model so its empty)
+* class ScoreViewModel(): ViewModel()
+*
+* . But sometimes you need the data right when the viewModel is initialized
+* and this is when you would use the factory method.
+* */
