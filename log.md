@@ -1,5 +1,16 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 13: November 30th, 2021 (Tuesday)
+
+**Today's Progress**:
+Today I focused on section 5.4: Live data transformation
+- I improved the 'Guess The Word' app by adding a one-minute countdown timer that appears above the score
+- I learned how to use Transformations.map() to convert one LiveData object to another.
+- I formatted the elapsed time LiveData object ( Type:Long) into a timer string LiveData object (Type:String), which then connected to the TextView displaying the time.
+- Now the timer ends the game automatically once it reaches 0.  
+
+The project I worked on this section is called 'Guess the word'.
+
 ### Day 12: November 29th, 2021 (Monday)
 
 **Today's Progress**:
