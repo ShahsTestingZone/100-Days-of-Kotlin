@@ -24,9 +24,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.android.guesstheword.R
 import com.example.android.guesstheword.databinding.GameFragmentBinding
@@ -78,7 +76,6 @@ class GameFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
 
-
         // Setting up the live data part 3
         //add Observer (view(of)Lifecycle) Object to the LiveData object
         /** Setting up LiveData observation relationship **/
@@ -92,7 +89,7 @@ class GameFragment : Fragment() {
 //            binding.wordText.text = newWord
 //        })
         // Observer for the Game finished event
-        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer<Boolean> { hasFinished ->
+        viewModel.eventGameFinish.observe(viewLifecycleOwner, { hasFinished ->
             if (hasFinished) gameFinished()
         })
         /*
@@ -102,11 +99,11 @@ class GameFragment : Fragment() {
         * it moves from an inactive to an active state.
         * The observer in the fragment is re-connected to the existing ViewModel and receives the current data.
         * The gameFinished() method is re-triggered via the next steps in the init block, and the toast displays.
-        *
+        * Therefore you have to the eventGameFinish variable to false so it doesn't keep triggering.
         *
         * */
 
-/** Used Data Binding within the XML layout to bind with ViewModel - so below listeners are not required*/
+        /** Used Data Binding within the XML layout to bind with ViewModel - so below listeners are not required*/
 //        binding.correctButton.setOnClickListener { onCorrect() }
 //        binding.skipButton.setOnClickListener { onSkip() }
 //        binding.endGameButton.setOnClickListener { onEndGame() }
@@ -153,7 +150,7 @@ class GameFragment : Fragment() {
     private fun gameFinished() {
         Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()
         val action = GameFragmentDirections.actionGameToScore()
-        action.score = viewModel.score.value?:0
+        action.score = viewModel.score.value ?: 0
         NavHostFragment.findNavController(this).navigate(action)
         viewModel.onGameFinishComplete()
 
