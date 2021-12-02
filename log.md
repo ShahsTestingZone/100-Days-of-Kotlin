@@ -1,5 +1,12 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 14: November 30th, 2021 (Wednesday)
+
+**Today's Progress**:
+Today I focused on section 6.1: Create a Room Database
+
+The project I worked on this section is called 'Track My Sleep Quality'.
+
 ### Day 13: November 30th, 2021 (Tuesday)
 
 **Today's Progress**:
