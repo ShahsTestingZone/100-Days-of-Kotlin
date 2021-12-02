@@ -1,11 +1,23 @@
 # 100 Days Of Code (Kotlin) - Log
 
-### Day 14: November 30th, 2021 (Wednesday)
+### Day 14: December 1st, 2021 (Wednesday)
 
 **Today's Progress**:
 Today I focused on section 6.1: Create a Room Database
+- I took an existing app and built the database portion of an app that tracks sleep quality. 
+- The app uses a database to store sleep data over time.
+- I created a Entity,Data Access Object and a Abstract Database Class Holder 
+- I created basic tests to verify the database works. 
+
 
 The project I worked on this section is called 'Track My Sleep Quality'.
+- This was an existing project and required all dependencies to be updated in the build script
+  - Update Gradle from 4 to 7
+  - Update JDK to 1.8
+  - Update android to androidx for the navigation (safe args) dependencies
+  
+- There was a few compliation errors along the way which i solved with stackoverflow. 
+
 
 ### Day 13: November 30th, 2021 (Tuesday)
 
