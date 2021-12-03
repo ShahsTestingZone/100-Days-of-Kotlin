@@ -1,5 +1,20 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 15: December 2nd, 2021 (Wednesday)
+
+**Today's Progress**:
+Today I focused on section 6.2: Coroutines and Room Database
+- In this codelab I built the view model, coroutines, and data-display portions of the TrackMySleepQuality app.
+- I extended the TrackMySleepQuality app to collect, store, and display data in and from the database.
+- I used coroutines to run long-running database operations in the background.
+- I used LiveData to trigger navigation and the display of a snackbar.
+- I used LiveData to enable and disable buttons.
+- In the process I learnt how threads work in Android and how to use Kotlin coroutines to move database operations away from the main thread.
+
+
+
+
+
 ### Day 14: December 1st, 2021 (Wednesday)
 
 **Today's Progress**:
