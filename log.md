@@ -1,18 +1,25 @@
 # 100 Days Of Code (Kotlin) - Log
 
-### Day 15: December 2nd, 2021 (Wednesday)
+### Day 16: December 3rd, 2021 (Saturday)
+
+**Today's Progress**:
+Today I focused on section 6.3: Use LiveData to control button states
+- I used LiveData to trigger navigation and the display of a snackbar.
+- I used LiveData to enable and disable buttons.
+
+
+### Day 15: December 2nd, 2021 (Friday)
 
 **Today's Progress**:
 Today I focused on section 6.2: Coroutines and Room Database
 - In this codelab I built the view model, coroutines, and data-display portions of the TrackMySleepQuality app.
 - I extended the TrackMySleepQuality app to collect, store, and display data in and from the database.
-- I used coroutines to run long-running database operations in the background.
-- I used LiveData to trigger navigation and the display of a snackbar.
-- I used LiveData to enable and disable buttons.
+- I learnt the use of suspend functions coupled with Co-routines.  This then helped me to run long-running database operations in the background.
 - In the process I learnt how threads work in Android and how to use Kotlin coroutines to move database operations away from the main thread.
 
-
-
+This codelab was difficult as there was a bug with the room library and it wasn't working with the suspend fucntion in my SleepDatabaseDao. 
+After an hour of searching on stake overflow and finding no soloution, i finally solved it by updating the room version to the latest alpha 
+version which accounted for the latest bugs. 
 
 
 ### Day 14: December 1st, 2021 (Wednesday)
