@@ -22,7 +22,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.android.trackmysleepquality.R
+import com.example.android.trackmysleepquality.database.SleepDatabase
 import com.example.android.trackmysleepquality.databinding.FragmentSleepTrackerBinding
 
 /**
@@ -35,7 +37,7 @@ class SleepTrackerFragment : Fragment() {
     /**
      * Called when the Fragment is ready to display content to the screen.
      *
-     * This function uses DataBindingUtil to inflate R.layout.fragment_sleep_quality.
+     * This function uses DataBindingUtil to inflate R.layout.fragment_sleep_tracker.
      */
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -43,6 +45,27 @@ class SleepTrackerFragment : Fragment() {
         // Get a reference to the binding object and inflate the fragment views.
         val binding: FragmentSleepTrackerBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_sleep_tracker, container, false)
+
+        /** Create an instance of the ViewModel Factory.*/
+        //You need a reference to the app that this fragment is attached to, to pass into the view-model factory provider.
+        val application = requireNotNull(this.activity).application
+        //The requireNotNull Kotlin function throws an IllegalArgumentException if the value is null.
+
+        // Reference your data source via a reference to the DAO.
+        val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
+        // the above returns a SleepDatabaseDoa - you could rename the variable to sleepDao
+
+        val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
+
+        /** Get a reference to the ViewModel associated with this fragment.*/
+        val sleepTrackerViewModel = ViewModelProvider(this, viewModelFactory)[SleepTrackerViewModel::class.java]
+
+        /** Data Binding*/
+        // Set the current activity as the lifecycle owner of the binding
+        binding.lifecycleOwner = this
+        // Assign the sleepTrackerViewModel binding variable to the sleepTrackerViewModel
+        binding.sleepTrackerViewModel = sleepTrackerViewModel
+
 
         return binding.root
     }

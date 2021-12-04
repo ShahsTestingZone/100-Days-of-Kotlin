@@ -22,27 +22,27 @@ import androidx.room.*
 @Dao
 interface SleepDatabaseDao {
     @Insert
-    fun insert(night: SleepNight)
+    suspend fun insert(night: SleepNight)
 
     @Update
-    fun update(night: SleepNight)
+    suspend fun update(night: SleepNight)
 
     @Query ("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
-    fun get(key: Long): SleepNight?
+    suspend fun get(key: Long): SleepNight?
     //Notice the :key. You use the colon notation in the query to reference arguments in the function.
 
     @Query("DELETE FROM daily_sleep_quality_table")
-    fun clear()
+    suspend fun clear()
 
     @Delete
-    fun delete(night: SleepNight)
+    suspend fun delete(night: SleepNight)
     /*The @Delete annotation deletes one item, and you could use @Delete and supply a list of nights to delete. The drawback
     is that you need to fetch or know what's in the table. The @Delete annotation is great for deleting specific entries, but
     not efficient for clearing all entries from a table.
     */
 
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
-    fun getTonight(): SleepNight?
+    suspend fun getTonight(): SleepNight?
     /* Make the SleepNight returned by getTonight() nullable, so that the function can handle the case where the table is empty.
     (The table is empty at the beginning, and after the data is cleared.)
     */
@@ -51,6 +51,8 @@ interface SleepDatabaseDao {
     fun getAllNights(): LiveData<List<SleepNight>>
     /*Have getAllNights() return a list of SleepNight entities as LiveData. Room keeps this LiveData updated for you,
     which means you only need to explicitly get the data once.
+    *
+    * No suspend keyword required as Room already uses a background thread for that specific @Query which returns LiveData.
     */
 
 
