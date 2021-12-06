@@ -1,6 +1,17 @@
 # 100 Days Of Code (Kotlin) - Log
 
-### Day 16: December 3rd, 2021 (Saturday)
+### Day 17: December 6th, 2021 (Monday)
+
+**Today's Progress**:
+Today I focused on section 7.1: RecyclerView Fundamentals
+- I changed the TrackMySleepQuality app from the previous lesson to use a RecyclerView to display sleep-quality data.
+- I use a RecyclerView with an Adapter and a ViewHolder to display a list of items.
+ 
+This was a good refresher for RecyclerViews. In terms of compartmentalising the code it did take me a while to sit and understand concepts. 
+In particular keeping the adapter logic seperate from the ViewHolder logic. This makes sense but was different to how i first built an app using recyclerview.  
+I still need to get my head around the use of a private constructor and benefits of inner classes. 
+
+### Day 16: December 4th, 2021 (Saturday)
 
 **Today's Progress**:
 Today I focused on section 6.3: Use LiveData to control button states
@@ -9,7 +20,7 @@ Today I focused on section 6.3: Use LiveData to control button states
 
 This section was difficult to understand in terms of button states and using transformation to provide a boolean value from a different Type. 
 
-### Day 15: December 2nd, 2021 (Friday)
+### Day 15: December 3rd, 2021 (Friday)
 
 **Today's Progress**:
 Today I focused on section 6.2: Coroutines and Room Database
