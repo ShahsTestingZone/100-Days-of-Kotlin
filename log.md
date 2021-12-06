@@ -7,6 +7,7 @@ Today I focused on section 6.3: Use LiveData to control button states
 - I used LiveData to trigger navigation and the display of a snackbar.
 - I used LiveData to enable and disable buttons.
 
+This section was difficult to understand in terms of button states and using transformation to provide a boolean value from a different Type. 
 
 ### Day 15: December 2nd, 2021 (Friday)
 
