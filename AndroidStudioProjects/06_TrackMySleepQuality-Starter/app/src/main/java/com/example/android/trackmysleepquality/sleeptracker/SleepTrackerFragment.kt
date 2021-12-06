@@ -17,16 +17,21 @@
 package com.example.android.trackmysleepquality.sleeptracker
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.android.trackmysleepquality.R
 import com.example.android.trackmysleepquality.database.SleepDatabase
 import com.example.android.trackmysleepquality.databinding.FragmentSleepTrackerBinding
+import com.google.android.material.snackbar.Snackbar
 
+private const val TAG = "SleepTrackerFragment"
 /**
  * A fragment with buttons to record start and end times for sleep, which are saved in
  * a database. Cumulative data is displayed in a simple scrollable TextView.
@@ -65,6 +70,30 @@ class SleepTrackerFragment : Fragment() {
         binding.lifecycleOwner = this
         // Assign the sleepTrackerViewModel binding variable to the sleepTrackerViewModel
         binding.sleepTrackerViewModel = sleepTrackerViewModel
+
+
+        sleepTrackerViewModel.navigateToSleepQuality.observe(this, Observer {night ->
+            night?.let {
+                this.findNavController().navigate(
+                    SleepTrackerFragmentDirections
+                        .actionSleepTrackerFragmentToSleepQualityFragment(night.nightId))
+                sleepTrackerViewModel.doneNavigating()
+            }
+            //let is often used for executing a code block only with non-null values.
+            // https://kotlinlang.org/docs/scope-functions.html#let
+        })
+
+        sleepTrackerViewModel.showSnackBarEvent.observe(this, Observer {
+            if (it == true) { // Observed state is true.
+                Snackbar.make(
+                    requireActivity().findViewById(android.R.id.content),
+                    getString(R.string.cleared_message),
+                    Snackbar.LENGTH_SHORT // How long to display the message.
+                ).show()
+                sleepTrackerViewModel.doneShowingSnackbar()
+            }
+        })
+
 
 
         return binding.root

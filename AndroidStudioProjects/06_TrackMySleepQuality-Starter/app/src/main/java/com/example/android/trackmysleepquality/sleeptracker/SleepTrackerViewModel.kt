@@ -18,10 +18,8 @@ package com.example.android.trackmysleepquality.sleeptracker
 
 import android.app.Application
 import android.provider.SyncStateContract.Helpers.update
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.viewModelScope
+import android.util.Log
+import androidx.lifecycle.*
 import com.example.android.trackmysleepquality.database.SleepDatabaseDao
 import com.example.android.trackmysleepquality.database.SleepNight
 import com.example.android.trackmysleepquality.formatNights
@@ -30,6 +28,8 @@ import kotlinx.coroutines.launch
 /**
  * ViewModel for SleepTrackerFragment.
  */
+
+private const val TAG = "SleepTrackerViewModel"
 class SleepTrackerViewModel(
     val database: SleepDatabaseDao,
     application: Application
@@ -39,8 +39,34 @@ class SleepTrackerViewModel(
 
     private val nights = database.getAllNights()
 
+    private val _navigateToSleepQuality = MutableLiveData<SleepNight?>()
+    val navigateToSleepQuality: LiveData<SleepNight?>
+        get() = _navigateToSleepQuality
+
+    private var _showSnackbarEvent = MutableLiveData<Boolean>()
+    val showSnackBarEvent: LiveData<Boolean>
+        get() = _showSnackbarEvent
+
     val nightsString = Transformations.map(nights) { nights ->
         formatNights(nights, application.resources)
+    }
+
+    // see comment for enable feature at end of file
+    val startButtonVisible = Transformations.map(tonight) {
+        it == null
+        //The Start button should be enabled when tonight is null.
+        // since this function is connected to 'android:enabled=' in xml it will control the widget
+
+    }
+    val stopButtonVisible = Transformations.map(tonight) {
+        it != null
+//        The Stop button should be enabled when tonight is not null.
+
+    }
+    var clearButtonVisible = Transformations.map(nights) {
+        it?.isNotEmpty()
+        //The Clear button should only be enabled if nights, and thus the database, contains sleep nights.
+
     }
 
     init {
@@ -78,9 +104,12 @@ class SleepTrackerViewModel(
             val oldNight = tonight.value ?: return@launch
             oldNight.endTimeMilli = System.currentTimeMillis()
             update(oldNight)
+            _navigateToSleepQuality.value = oldNight
         }
         //In Kotlin, the return@label syntax specifies the function from which this statement returns, among several nested functions.
         //https://kotlinlang.org/docs/returns.html#return-to-labels
+
+
     }
 
     private suspend fun update(night: SleepNight) {
@@ -91,13 +120,31 @@ class SleepTrackerViewModel(
         viewModelScope.launch {
             clear()
             tonight.value = null
+            _showSnackbarEvent.value = true
         }
     }
 
     private suspend fun clear() {
         database.clear()
     }
+    fun doneNavigating() {
+        _navigateToSleepQuality.value = null
+    }
+
+    fun doneShowingSnackbar() {
+        _showSnackbarEvent.value = false
+    }
 
 
 }
+
+//Tip: Setting the appearance of a disabled View
+//The enabled attribute is not the same as the visibility attribute. The enabled attribute only determines whether the
+// View is enabled, not whether the View is visible.
+//The meaning of "enabled" varies by the subclass. A user can edit the text in an enabled EditText,
+// but not in a disabled EditText. A user can tap an enabled Button, but can't tap a disabled one.
+
+//The android:enabled property is a boolean value that indicates whether or not the button is enabled.
+// (An enabled button can be tapped; a disabled button can't.) Give the property the value of a state
+// variable that you'll define in a moment.
 
