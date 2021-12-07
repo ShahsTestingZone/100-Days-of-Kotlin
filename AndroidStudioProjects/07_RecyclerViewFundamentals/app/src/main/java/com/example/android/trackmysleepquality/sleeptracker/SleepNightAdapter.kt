@@ -13,7 +13,9 @@ import com.example.android.trackmysleepquality.convertNumericQualityToString
 import com.example.android.trackmysleepquality.database.SleepNight
 
 
+
 class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
+
     var data =  listOf<SleepNight>()
         set(value) {
             field = value
@@ -23,9 +25,9 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
 // In the setter, give data a new value, then call notifyDataSetChanged() to trigger redrawing the list with the new data.
 
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
+
     }
 
     override fun getItemCount(): Int {
@@ -35,9 +37,7 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = data[position]
         holder.bind(item)
-
     }
-
 
 
     //Change the signature of the ViewHolder class so that the constructor is private.
@@ -49,7 +49,7 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
 
 
         fun bind(item: SleepNight) {
-            val res = itemView.context.resources 
+            val res = itemView.context.resources
 
             sleepLength.text = convertDurationToFormatted(
                 item.startTimeMilli, item.endTimeMilli, res
@@ -89,3 +89,4 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
 
 
 }
+
