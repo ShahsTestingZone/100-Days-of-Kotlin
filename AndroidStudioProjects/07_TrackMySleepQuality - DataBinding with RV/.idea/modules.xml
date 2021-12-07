@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/07_TrackMySleepQuality.iml" filepath="$PROJECT_DIR$/.idea/modules/07_TrackMySleepQuality.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/07_TrackMySleepQuality.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/07_TrackMySleepQuality.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/07_TrackMySleepQuality_-_DataBinding_with_RV.iml" filepath="$PROJECT_DIR$/.idea/modules/07_TrackMySleepQuality_-_DataBinding_with_RV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/07_TrackMySleepQuality_-_DataBinding_with_RV.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/07_TrackMySleepQuality_-_DataBinding_with_RV.app.iml" />
     </modules>
   </component>
 </project>

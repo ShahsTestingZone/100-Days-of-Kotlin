@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/06_TrackMySleepQuality-Starter/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/06_TrackMySleepQuality-Starter/app/src/main/res/layout/fragment_sleep_quality.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/06_TrackMySleepQuality-Starter/app/src/main/res/layout/fragment_sleep_tracker.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/07_RecyclerViewFundamentals/app/src/main/res/layout/fragment_sleep_quality.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/07_RecyclerViewFundamentals/app/src/main/res/layout/fragment_sleep_tracker.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/07_RecyclerViewFundamentals/app/src/main/res/layout/list_item_sleep_night.xml" value="0.33" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/07_RecyclerViewFundamentals/app/src/main/res/layout/text_item_view.xml" value="0.35597826086956524" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/07_TrackMySleepQuality - DataBinding with RV/app/src/main/res/layout/fragment_sleep_tracker.xml" value="0.3496376811594203" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/07_TrackMySleepQuality - DataBinding with RV/app/src/main/res/layout/list_item_sleep_night.xml" value="0.3496376811594203" />
+        <entry key="..\:/Users/Shah Alom/04GitHub/100 Days of Kotlin/AndroidStudioProjects/07_TrackMySleepQuality - DataBinding with RV/app/src/main/res/layout/text_item_view.xml" value="0.3496376811594203" />
       </map>
     </option>
   </component>

@@ -20,22 +20,19 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
+/**
+ * Represents one night's sleep through start, end times, and the sleep quality.
+ */
 @Entity(tableName = "daily_sleep_quality_table")
 data class SleepNight(
-    @PrimaryKey(autoGenerate = true)
-    var nightId: Long = 0L,
+        @PrimaryKey(autoGenerate = true)
+        var nightId: Long = 0L,
 
-    @ColumnInfo(name = "start_time_milli")
-    var startTimeMilli: Long = System.currentTimeMillis(),
+        @ColumnInfo(name = "start_time_milli")
+        val startTimeMilli: Long = System.currentTimeMillis(),
 
-    @ColumnInfo(name = "end_time_milli")
-    var endTimeMilli: Long = startTimeMilli,
+        @ColumnInfo(name = "end_time_milli")
+        var endTimeMilli: Long = startTimeMilli,
 
-    @ColumnInfo(name = "quality_rating")
-    var sleepQuality: Int = -1
-)
-
-// We initialize the sleepQuality, so set it to -1, indicating that no quality data has been collected.
-// Initialize the start time to a known valid time. A good value to choose is the current time in milliseconds.
-// You also have to initialize the end time. Set it to the start time to indicate no end time has been recorded yet
+        @ColumnInfo(name = "quality_rating")
+        var sleepQuality: Int = -1)

@@ -17,43 +17,58 @@
 package com.example.android.trackmysleepquality.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Update
 
+
+/**
+ * Defines methods for using the SleepNight class with Room.
+ */
 @Dao
 interface SleepDatabaseDao {
+
     @Insert
     suspend fun insert(night: SleepNight)
 
+    /**
+     * When updating a row with a value already set in a column,
+     * replaces the old value with the new one.
+     *
+     * @param night new value to write
+     */
     @Update
     suspend fun update(night: SleepNight)
 
-    @Query ("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
-    suspend fun get(key: Long): SleepNight?
-    //Notice the :key. You use the colon notation in the query to reference arguments in the function.
+    /**
+     * Selects and returns the row that matches the supplied start time, which is our key.
+     *
+     * @param key startTimeMilli to match
+     */
+    @Query("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
+    suspend fun get(key: Long): SleepNight
 
+    /**
+     * Deletes all values from the table.
+     *
+     * This does not delete the table, only its contents.
+     */
     @Query("DELETE FROM daily_sleep_quality_table")
     suspend fun clear()
 
-    @Delete
-    suspend fun delete(night: SleepNight)
-    /*The @Delete annotation deletes one item, and you could use @Delete and supply a list of nights to delete. The drawback
-    is that you need to fetch or know what's in the table. The @Delete annotation is great for deleting specific entries, but
-    not efficient for clearing all entries from a table.
-    */
-
-    @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
-    suspend fun getTonight(): SleepNight?
-    /* Make the SleepNight returned by getTonight() nullable, so that the function can handle the case where the table is empty.
-    (The table is empty at the beginning, and after the data is cleared.)
-    */
-
+    /**
+     * Selects and returns all rows in the table,
+     *
+     * sorted by start time in descending order.
+     */
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC")
     fun getAllNights(): LiveData<List<SleepNight>>
-    /*Have getAllNights() return a list of SleepNight entities as LiveData. Room keeps this LiveData updated for you,
-    which means you only need to explicitly get the data once.
-    *
-    * No suspend keyword required as Room already uses a background thread for that specific @Query which returns LiveData.
-    */
 
-
+    /**
+     * Selects and returns the latest night.
+     */
+    @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
+    suspend fun getTonight(): SleepNight?
 }
