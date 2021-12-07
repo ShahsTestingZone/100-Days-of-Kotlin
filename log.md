@@ -1,5 +1,19 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 18: December 7th, 2021 (Tuesday)
+
+**Today's Progress**:
+Today I focused on section 7.2:  DiffUtil and data binding with RecyclerView
+- I continued to build on the TrackMySleepQuality app from the previous codelab in this series.
+- I learnt how to use DiffUtil, a utility that calculates the difference between two lists to efficiently update a list displayed by RecyclerView.
+- I learnt how to use and tailor a ListView Adapter to make managing my list easier. (data changes to database). 
+- I learnt how to use data binding with RecyclerView.
+- I learnt to use binding adapters to transform data.
+
+The project I worked on this section is called '07_RecyclerViewFundamentals - List Adapter' - First part without Databinding. 
+The project I worked on this section is called '07_TrackMySleepQuality - DataBinding with RV'
+
+
 ### Day 17: December 6th, 2021 (Monday)
 
 **Today's Progress**:
@@ -10,6 +24,9 @@ Today I focused on section 7.1: RecyclerView Fundamentals
 This was a good refresher for RecyclerViews. In terms of compartmentalising the code it did take me a while to sit and understand concepts. 
 In particular keeping the adapter logic seperate from the ViewHolder logic. This makes sense but was different to how i first built an app using recyclerview.  
 I still need to get my head around the use of a private constructor and benefits of inner classes. 
+
+The project I worked on this section is called '07_RecyclerViewFundamentals'
+
 
 ### Day 16: December 4th, 2021 (Saturday)
 
@@ -33,6 +50,7 @@ This codelab was difficult as there was a bug with the room library and it wasn'
 After an hour of searching on stake overflow and finding no soloution, i finally solved it by updating the room version to the latest alpha 
 version which accounted for the latest bugs. 
 
+The project I worked on this section is called '06_TrackMySleepQuality - Final'
 
 ### Day 14: December 1st, 2021 (Wednesday)
 
