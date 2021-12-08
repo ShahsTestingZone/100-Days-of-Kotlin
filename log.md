@@ -1,5 +1,16 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 19: December 8th, 2021 (Wednesday)
+
+**Today's Progress**:
+Today I focused on section 7.3:  GridLayout and RecyclerView
+- I replaced the list of sleep data displayed by the RecyclerView in the app with a grid of sleep data.
+- I learnt how to use a different LayoutManager to change how your data is displayed in the RecyclerView by implementing the layout manager programmatically
+- I update the list_item_sleep_night.xml and removed the textview as we were using a different viewholder pattern/design
+- I updated the BindingApater util class to change into a companion object and used the @JvmStatic notation to resolve new runtime error that was stopping compliation
+
+Surprisingly this was an easy transtion from a LinerLayout to a Grid Layout. Very small changes where made the most important being bullet point three. 
+
 ### Day 18: December 7th, 2021 (Tuesday)
 
 **Today's Progress**:
