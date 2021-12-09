@@ -1,5 +1,23 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 20: December 9th, 2021 (Thursday)
+
+**Today's Progress**:
+Today I focused on section 7.4:  Interacting with RecyclerView items
+- Build on an extended version of the TrackMySleepQuality app from previous codelabs in this series.
+ - Add a click listener to your list and start listening for user interaction. When a list item is tapped, 
+ it triggers navigation to a fragment with details on the clicked item. The starter code provides code for the detail fragment, 
+ as well as the navigation code.
+
+
+Lesson Learnt
+val arguments = SleepDetailFragmentArgs.fromBundle(arguments) - caused compiler error Type mismatch: inferred type is Bundle? but Bundle was expected
+        // used bang bang (arguments!!) - did this as we needed to make it compile as we haven't added navigation from previous fragment yet.
+        // Alternative use requireArguments() instead of arguments.
+		val arguments = SleepDetailFragmentArgs.fromBundle(requireArguments())
+       // we should use requireArguments instead of arguments because 'requireArguments' are NonNull and 'arguments' are Nullable
+
+
 ### Day 19: December 8th, 2021 (Wednesday)
 
 **Today's Progress**:
@@ -130,6 +148,33 @@ Today I focused on section 5.1 focusing on View Models.
  Note: When you need the data right away when the viewModel is initialized. Instead of initilising variables within the viewmodel after it has been created. 
 
 The project I worked on this section is called 'Guess the word'.
+
+*Lessons Learnt 1*
+Why use viewLifecycleOwner?
+Fragment views get destroyed when a user navigates away from a fragment, even though the fragment itself is not destroyed.
+This essentially creates two lifecycles, the lifecycle of the fragment, and the lifecycle of the fragment's view.
+Referring to the fragment's lifecycle instead of the fragment view's lifecycle can cause subtle bugs when updating the fragment's view.
+Therefore, when setting up observers that affect the fragment's view you should:
+1. Set up the observers in onCreateView()
+2. Pass in viewLifecycleOwner to observers
+
+*Lessons Learnt 2*
+
+Learnt how to set the argument passed in navigations programmatically or provide a default value
+ private fun gameFinished() {
+        Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()
+        val action = GameFragmentDirections.actionGameToScore()
+        action.score = viewModel.score.value?:0  --- THIS LINE
+        NavHostFragment.findNavController(this).navigate(action)
+        viewModel.onGameFinishComplete()
+
+then on receiving fragment - use the .score variable once you have first created the arguments variable. 
+//Initialise ViewModel Part 2
+val arguments = ScoreFragmentArgs.fromBundle(requireArguments())
+        viewModelFactory = ScoreViewModelFactory(arguments.score)
+		
+		// option 2 - use directly if you only have 1 or two variables
+		viewModelFactory = ScoreViewModelFactory(ScoreFragmentArgs.fromBundle(requireArguments()).score)
  
 ### Day 9: November 26th, 2021 (Friday)
 
