@@ -1,5 +1,18 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 21: December 11th, 2021 (Saturday)
+
+**Today's Progress**:
+Today I focused on section 7.5:  Headers in RecyclerViews
+- I updated the RecyclerView to display a header at the start of the list.
+- I used a different ViewHolder for the header than for data items
+- Essentially the app will check the index of the list to determine which ViewHolder to use.
+
+This codelab was a bit diifcult to understand as it didn't go to much into depth but rather just provided code. I kind of understand how everything works and should be able to replicate it in my app. 
+
+The project I worked on this section is called '07_TrackMySleepQuality - Headers in RV'
+
+
 ### Day 20: December 9th, 2021 (Thursday)
 
 **Today's Progress**:
@@ -10,7 +23,7 @@ Today I focused on section 7.4:  Interacting with RecyclerView items
  as well as the navigation code.
 
 
-Lesson Learnt
+*Lesson Learnt*
 val arguments = SleepDetailFragmentArgs.fromBundle(arguments) - caused compiler error Type mismatch: inferred type is Bundle? but Bundle was expected
         // used bang bang (arguments!!) - did this as we needed to make it compile as we haven't added navigation from previous fragment yet.
         // Alternative use requireArguments() instead of arguments.
