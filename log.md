@@ -1,5 +1,22 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 22: December 13th, 2021 (Monday)
+
+**Today's Progress**:
+Today I focused on section 8.1:  Getting data from the internet
+- I modified a starter app to make a web service API request and handle the response.
+- I implemented a network layer for the app using the Retrofit library.
+- I parsed the JSON response from the web service into the app's live data with the Moshi library.
+- I used Retrofit's support for coroutines to simplify the code.
+- I update the manifesto and added permissions to use the internet.
+
+The code for working with RESTful APi seems straight foward with the Retrofit and Moshi Library. I only used the get call so far but will need to learn how to pass data back.
+
+The project I worked on this section is called '08_MarsRealEstate'
+
+*Lesson Learnt*
+To use a different property name for a key, annotate that property with the @Json annotation and the JSON key name. see notes in MarsApiService.kt
+
 ### Day 21: December 11th, 2021 (Saturday)
 
 **Today's Progress**:
