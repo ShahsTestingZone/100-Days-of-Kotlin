@@ -1,5 +1,17 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 23: December 14th, 2021 (Tuesday)
+
+**Today's Progress**:
+Today I focused on section 8.2:  Loading and displaying images from the internet.
+- Today i have started this code lab and managed to complete up to section 4. I wasn't feeling so well so couldn't concentrate on the code. 
+- I implement Glide into the project
+- I updated the OverView-ViewModel class to use live data for the parsed JSON Objects
+- I updated the res/layout/fragment_overview to bind the textView with the ViewModel
+- I created a binding adapter to pass to include in the xml file. 
+
+I still need to complete this lab and will finish it tmw. 
+
 ### Day 22: December 13th, 2021 (Monday)
 
 **Today's Progress**:
