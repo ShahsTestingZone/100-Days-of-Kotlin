@@ -1,5 +1,22 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 24: December 15th, 2021 (Wednesday)
+
+**Today's Progress**:
+Today I finished section 8.2:  Loading and displaying images from the internet.
+I also focused on section 8.3: Filtering and detail views with internet data. 
+- I learnt how to use complex binding expressions in layout files.
+- I learnt how to make Retrofit requests to a web service with query options.
+- I modified the MarsRealEstate app to mark the Mars properties that are for sale (versus those that are for rent) with a dollar sign icon ( new use for frame Layout).
+- I used the options menu on the overview page to create a web service request that filters the Mars properties by type.
+- I created a detail fragment for a Mars property, hook up that fragment to the overview grid with navigation, and pass the property data into that fragment (parcelize).
+
+Im learning alot more, but some of it is confusing me as some of the patterns are being implemented in different ways, or the steps are different to previous code labs. 
+e.g. why do we initialise an application for the detailviewmodelfactory. This becomes clearer when other steps are added later and we use strings. 
+I also like the fact its confusing me as i need to pause and spend some time understanding where everything fits in when it comes to triggers - Live data binding with xml. 
+
+The project I worked on this section is called '08_MarsRealEstate - Part 3'
+
 ### Day 23: December 14th, 2021 (Tuesday)
 
 **Today's Progress**:
@@ -11,6 +28,8 @@ Today I focused on section 8.2:  Loading and displaying images from the internet
 - I created a binding adapter to pass to include in the xml file. 
 
 I still need to complete this lab and will finish it tmw. 
+
+The project I worked on this section is called '08_MarsRealEstate - Glide'
 
 ### Day 22: December 13th, 2021 (Monday)
 
@@ -24,9 +43,10 @@ Today I focused on section 8.1:  Getting data from the internet
 
 The code for working with RESTful APi seems straight foward with the Retrofit and Moshi Library. I only used the get call so far but will need to learn how to pass data back.
 
-The project I worked on this section is called '08_MarsRealEstate'
+The project I worked on this section is called '08_MarsRealEstate - Moshi and Json'
 
 *Lesson Learnt*
+
 To use a different property name for a key, annotate that property with the @Json annotation and the JSON key name. see notes in MarsApiService.kt
 
 ### Day 21: December 11th, 2021 (Saturday)
