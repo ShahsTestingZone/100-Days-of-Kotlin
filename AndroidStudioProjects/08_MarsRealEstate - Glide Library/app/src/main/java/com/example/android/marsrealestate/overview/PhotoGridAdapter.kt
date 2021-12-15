@@ -17,4 +17,51 @@
 
 package com.example.android.marsrealestate.overview
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.example.android.marsrealestate.databinding.GridViewItemBinding
+import com.example.android.marsrealestate.network.MarsProperty
 
+
+class PhotoGridAdapter : ListAdapter<MarsProperty,
+        PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoGridAdapter.MarsPropertyViewHolder {
+        return MarsPropertyViewHolder(GridViewItemBinding.inflate(
+            LayoutInflater.from(parent.context)))
+    }
+
+    override fun onBindViewHolder(holder: PhotoGridAdapter.MarsPropertyViewHolder, position: Int) {
+        val marsProperty = getItem(position)
+        holder.bind(marsProperty)
+    }
+
+    companion object DiffCallback : DiffUtil.ItemCallback<MarsProperty>() {
+        override fun areItemsTheSame(oldItem: MarsProperty, newItem: MarsProperty): Boolean {
+            return oldItem === newItem
+            //Kotlin's referential equality operator (===), which returns true if the object references for oldItem and newItem are the same
+        }
+
+        override fun areContentsTheSame(oldItem: MarsProperty, newItem: MarsProperty): Boolean {
+            return oldItem.id == newItem.id
+        }
+
+    }
+
+    inner class MarsPropertyViewHolder(private var binding: GridViewItemBinding):
+        RecyclerView.ViewHolder(binding.root) {
+
+        //create a bind() method that takes a MarsProperty object as an argument and sets binding.property to that object.
+        // Call executePendingBindings() after setting the property, which causes the update to execute immediately.
+        fun bind(marsProperty: MarsProperty) {
+            binding.property = marsProperty
+            // the above line is used to connect it to the XML layout file for databinding.
+            binding.executePendingBindings()
+        }
+
+
+    }
+}
