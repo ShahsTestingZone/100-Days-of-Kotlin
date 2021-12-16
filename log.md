@@ -1,5 +1,28 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 25: December 16th, 2021 (Thursday)
+
+**Today's Progress**:
+Today I finished section 9.1:  Repository.
+One of the most stressful project to upgrade in terms of packages and error finding to make the app work. Initally i used the standard 
+packages provided but as I completed the codelabs new errors emerged and then the app wouldn't compile. 
+
+Key things that were upgraded in this project
+- Updating all depencies via project structures - This solved the error for creating the room database e.g. DAO and Entities. I needed gradle to be updated from 4 to 7
+- Navigation/ SafeArgs classpaths/implementation in build.grade (project and module) - resolved errors created from arch.navigation dependencies about passing arguments
+- In devbyte_Item.xml the MasterCardview widget needed another attribute  to make it work android:theme="@style/Theme.MaterialComponents.Light" - solved error
+of not inflating viewholder. 
+- @ Entity - the variables in this need to be var or else it doesn't work. 
+- removed lifecycle-extension as its deprecated. 
+- updated the compileSdkVersion 31
+- resolving these errors finally made the app work the way it was meant to. 
+
+Summary - I finally finished the codelab and now understand how to better use a repository. Some of the steps seem complicated due to the 'seperation of concerns' 
+and mapping of the different data classes e.g. network, domain and database. Once you get your head around this its easier to understand to what data you convert so that it could
+be used in the right place. E.g converting network data to domain, so you can use the live data to update the TextView in the xml spreadsheet. 
+
+
+
 ### Day 24: December 15th, 2021 (Wednesday)
 
 **Today's Progress**:
