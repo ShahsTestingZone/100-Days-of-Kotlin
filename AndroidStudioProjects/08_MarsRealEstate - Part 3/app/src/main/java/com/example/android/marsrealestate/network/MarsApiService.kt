@@ -51,7 +51,7 @@ private val retrofit = Retrofit.Builder()
 interface MarsApiService {
     @GET("realestate")
     suspend fun getProperties( @Query("filter") type: String): List<MarsProperty> // return list of the data class which store the JSON objects
-//    fun getProperties(): Cal<List<MarsProperty>> - old code - update to above to make code cleaner in viewmodel
+//    fun getProperties(): Call<List<MarsProperty>> - old code - update to above to make code cleaner in viewmodel
 }
 
 // define a public object called MarsApi to initialize the Retrofit service. This is a standard Kotlin code pattern to use when creating a service object.

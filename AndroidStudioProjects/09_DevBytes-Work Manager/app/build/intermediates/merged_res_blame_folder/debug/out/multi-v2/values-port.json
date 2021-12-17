@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Shah Alom\\04GitHub\\100 Days of Kotlin\\AndroidStudioProjects\\09_DevBytes-Work Manager\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Shah Alom\\.gradle\\caches\\transforms-3\\a089ef95b86d74ce3a1e6bb939f3d74b\\transformed\\appcompat-1.4.0\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}
