@@ -1,5 +1,17 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 26: December 17th, 2021 (Friday)
+
+**Today's Progress**:
+Today I finished section 9.2:  Work Manager
+- I created a worker class to execute a background task to pre-fetch the DevBytes video playlist from the network.
+- I scheduled a periodic WorkRequest that is executed once a day.
+- I added constraints to the WorkRequest.
+- Finally i used the Work Manager to run the worker periodically with the Applicaiton Class.
+
+Surprisingly this was an easy topic area to understand. 
+
+
 ### Day 25: December 16th, 2021 (Thursday)
 
 **Today's Progress**:
