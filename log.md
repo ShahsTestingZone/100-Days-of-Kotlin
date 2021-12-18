@@ -1,5 +1,18 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 27: December 18th, 2021 (Saturday)
+
+**Today's Progress**:
+Today I took a day off from android/kotlin codelabs and focused on how to integrate Android with AWS. I did this whilst i still remember this existed. 
+
+I spent 2 hours researching some of the microservices (GraphQL) i could connect and found 1 tutorial which i will try after finishing this Android short course.
+
+Links to Tutorials 
+- https://docs.amplify.aws/start/getting-started/installation/q/integration/android/#sign-up-for-an-aws-account
+- https://aws.amazon.com/getting-started/hands-on/build-android-app-amplify/
+
+COME BACK TO THIS LATER
+
 ### Day 26: December 17th, 2021 (Friday)
 
 **Today's Progress**:
