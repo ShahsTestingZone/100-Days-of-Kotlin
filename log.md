@@ -14,7 +14,10 @@ The project I worked on this section is called '08_GDGFinder'
 Important: When you have both themes and styles manipulating text, you must apply the text properties as a textAppearance attribute 
 if you want the text properties in the theme to override what's set and inherited in the style.
 
-
+Using downloadable fonts makes fonts available to users without increasing the size of your APK. To add a downloadable font for a view:
+- Select the view in the Design tab, and select More fonts from the drop-down menu of the fontFamily attribute.
+- In the Resources dialog, find a font and select the Create downloadable font radio button.
+- Verify that the Android manifest includes a meta-data tag for preloaded font
 
 ### Day 27: December 18th, 2021 (Saturday)
 
