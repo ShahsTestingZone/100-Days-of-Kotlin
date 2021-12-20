@@ -1,5 +1,21 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 28: December 20th, 2021 (Monday)
+
+**Today's Progress**:
+Today I finished section 10.1:  Material Design: Styles and Theme
+- I learnt the basics of Android's styling system
+- I learnt how to use attributes, styles, and themes to customize your app
+
+The project I worked on this section is called '08_GDGFinder'
+
+*Lesson Learnt*
+
+Important: When you have both themes and styles manipulating text, you must apply the text properties as a textAppearance attribute 
+if you want the text properties in the theme to override what's set and inherited in the style.
+
+
+
 ### Day 27: December 18th, 2021 (Saturday)
 
 **Today's Progress**:
