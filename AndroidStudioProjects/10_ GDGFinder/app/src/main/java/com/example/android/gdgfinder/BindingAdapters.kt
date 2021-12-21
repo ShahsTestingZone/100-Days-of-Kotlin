@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.android.gdgfinder.network.GdgChapter
 import com.example.android.gdgfinder.search.GdgListAdapter
 import com.google.android.material.chip.ChipGroup
+import java.util.*
 
 /**
  * When there is no Mars property data (data is null), hide the [RecyclerView], otherwise show it.

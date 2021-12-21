@@ -110,11 +110,7 @@ class GdgListFragment : Fragment() {
         val fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
 
         fusedLocationClient.lastLocation.addOnSuccessListener { location ->
-            if (location == null) {
-                startLocationUpdates(fusedLocationClient)
-            } else {
-                viewModel.onLocationUpdated(location)
-            }
+            viewModel.onLocationUpdated(location)
         }
     }
 
@@ -131,12 +127,12 @@ class GdgListFragment : Fragment() {
 
         val request = LocationRequest().setPriority(LocationRequest.PRIORITY_LOW_POWER)
         val callback = object: LocationCallback() {
-            override fun onLocationResult(locationResult: LocationResult?) {
-                val location = locationResult?.lastLocation ?: return
-                viewModel.onLocationUpdated(location)
-            }
+//            override fun onLocationResult(locationResult: LocationResult?) {
+//                val location = locationResult?.lastLocation ?: return
+//                viewModel.onLocationUpdated(location)
+//            }
         }
-        fusedLocationClient.requestLocationUpdates(request, callback, null)
+//        fusedLocationClient.requestLocationUpdates(request, callback, null)
     }
 
     /**
