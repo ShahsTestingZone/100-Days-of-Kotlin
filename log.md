@@ -1,5 +1,30 @@
 # 100 Days Of Code (Kotlin) - Log
 
+
+### Day 29: December 21st, 2021 (Tuesday)
+
+**Today's Progress**:
+Today I finished section 10.2:  Material Design: Dimension and Colors
+- I improved the UI of the app using Material components, dimensions, and color.
+- I learnt to apply Material Design principles to the UI of the GDGFinder app
+- I learnt to use Material components to make the app a bit more colourful and vibrant - check resourse
+- I learnt to extract and use dimensions
+- I learnt to create and use custom Material color schemes for the app's UI
+
+The project I worked on this section is called '08_GDGFinder'
+
+
+*Useful Resource for looking at primary and secondary colour.*
+ 
+ https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=669df6&secondary.color=a142f4
+
+*Lesson Learnt*
+
+colorOnPrimary: A color that passes accessibility guidelines for text and iconography when drawn on top of the primary color.
+
+colorOnSecondary: A color that passes accessibility guidelines for text and iconography when drawn on top of the secondary color.
+
+
 ### Day 28: December 20th, 2021 (Monday)
 
 **Today's Progress**:
@@ -423,3 +448,8 @@ In terms of my baseline, i have already done a extensive online course and have 
 **Link to previous course:** 
 [Android App Development Masterclass using Kotlin](https://www.udemy.com/course/android-oreo-kotlin-app-masterclass/)
 
+
+**Link to new advanced course:** 
+https://developer.android.com/codelabs/advanced-android-kotlin-training-welcome#0
+[Android Kotlin Advanced](https://developer.android.com/courses/kotlin-android-advanced/overview)
+[Android Kotlin ADvanced - Lesson Breakdown] (https://developer.android.com/courses/kotlin-android-advanced/toc)
