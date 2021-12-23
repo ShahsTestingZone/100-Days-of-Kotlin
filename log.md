@@ -1,5 +1,15 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 30: December 22nd, 2021 (Wednesday)
+
+**Today's Progress**:
+Today I finished section 10.3:  Material Design: Design for Everyone!
+- I extended the app to improve accessibility by making it work for RTL languages.
+- I learnt how to evaluate the app's accessibility.
+- I learnt how to use content descriptions to make the app work better with screen readers.
+- I learnt to use the the chips widget.
+- I also learnt how to adapt the app and give it the ability to work in night mode.
+
 
 ### Day 29: December 21st, 2021 (Tuesday)
 
