@@ -1,5 +1,20 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 31: January 4th 2022 (Tuesday)
+
+**Today's Progress**:
+I have taken a two week break for christmas and now need to get my routine going again. 
+
+The plan of action is 
+- Redesign the old app from the Udemy Course to use new libraries. 
+- Do the Android Development Advance Course
+- Start the AWS Developer Course since now i know how to use code. 
+- Build My own Project. 
+- Do Android tutotiral for AWS AppSync/Amplify. Some Knowledge on NodeJS is required. 
+
+
+
+
 ### Day 30: December 22nd, 2021 (Wednesday)
 
 **Today's Progress**:
