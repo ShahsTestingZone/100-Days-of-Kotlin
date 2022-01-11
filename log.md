@@ -1,16 +1,46 @@
 # 100 Days Of Code (Kotlin) - Log
 
+
+## Day 33: January 11th 2022 (Tuesday)
+
+**Today's Progress**:
+Yesterday i discovered that google have updated their Kotlin Fundamentals Course with a course called Kotlin Basics.
+
+- https://developer.android.com/courses/android-basics-kotlin/course
+
+The course curriculum looks the same as the other but with some new material around testing and coroutines, which i have yet to learn.
+
+Today i spent 8 hours completing 'Unit 1: Kotlin Basics'. With each code lab completed, it goes towards earning a profile badge.
+
+Surprisingly in the three weeks i haven't studied, I have forgotten some of the basics and this is bringing me back to speed.  
+
+I plan to complete all Six Units by Sunday.
+
+## Day 32: January 10th 2022 (Monday)
+
+**Today's Progress**:
+Today i spent the whole day setting up my Mac mini and all the software required for future projects.
+
+The goal of buying the Mac mini was to understand how to use a MacOS system. This is my first Apple computer and I need to gain confidence in using it.
+
+Currently the Mac Mini has a M1 chip, so some of the software is proving difficult to install as certain amendments are required.
+
+On a  separate note i went down a big rabbit hole, looking at integrating web3 technology e.g. IFPS and Algorand with Android.
+
+I will add this to the list of projects I want to build! Overall this area is very exciting!!!
+
+
 ### Day 31: January 4th 2022 (Tuesday)
 
 **Today's Progress**:
-I have taken a two week break for christmas and now need to get my routine going again. 
+I have taken a two week break for christmas and now need to get my routine going again.
 
-The plan of action is 
-- Redesign the old app from the Udemy Course to use new libraries. 
+The plan of action is
+- Redesign the old app from the Udemy Course to use new libraries.
 - Do the Android Development Advance Course
-- Start the AWS Developer Course since now i know how to use code. 
-- Build My own Project. 
-- Do Android tutotiral for AWS AppSync/Amplify. Some Knowledge on NodeJS is required. 
+- Start the AWS Developer Course since now i know how to use code.
+- Build My own Project.
+- Do Android tutorial for AWS AppSync/Amplify. Some Knowledge on NodeJS is required.
 
 
 
@@ -40,7 +70,7 @@ The project I worked on this section is called '08_GDGFinder'
 
 
 *Useful Resource for looking at primary and secondary colour.*
- 
+
  https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=669df6&secondary.color=a142f4
 
 *Lesson Learnt*
@@ -61,7 +91,7 @@ The project I worked on this section is called '08_GDGFinder'
 
 *Lesson Learnt*
 
-Important: When you have both themes and styles manipulating text, you must apply the text properties as a textAppearance attribute 
+Important: When you have both themes and styles manipulating text, you must apply the text properties as a textAppearance attribute
 if you want the text properties in the theme to override what's set and inherited in the style.
 
 Using downloadable fonts makes fonts available to users without increasing the size of your APK. To add a downloadable font for a view:
@@ -72,11 +102,11 @@ Using downloadable fonts makes fonts available to users without increasing the s
 ### Day 27: December 18th, 2021 (Saturday)
 
 **Today's Progress**:
-Today I took a day off from android/kotlin codelabs and focused on how to integrate Android with AWS. I did this whilst i still remember this existed. 
+Today I took a day off from android/kotlin codelabs and focused on how to integrate Android with AWS. I did this whilst i still remember this existed.
 
 I spent 2 hours researching some of the microservices (GraphQL) i could connect and found 1 tutorial which i will try after finishing this Android short course.
 
-Links to Tutorials 
+Links to Tutorials
 - https://docs.amplify.aws/start/getting-started/installation/q/integration/android/#sign-up-for-an-aws-account
 - https://aws.amazon.com/getting-started/hands-on/build-android-app-amplify/
 
@@ -91,29 +121,29 @@ Today I finished section 9.2:  Work Manager
 - I added constraints to the WorkRequest.
 - Finally i used the Work Manager to run the worker periodically with the Applicaiton Class.
 
-Surprisingly this was an easy topic area to understand. 
+Surprisingly this was an easy topic area to understand.
 
 
 ### Day 25: December 16th, 2021 (Thursday)
 
 **Today's Progress**:
 Today I finished section 9.1:  Repository.
-One of the most stressful project to upgrade in terms of packages and error finding to make the app work. Initally i used the standard 
-packages provided but as I completed the codelabs new errors emerged and then the app wouldn't compile. 
+One of the most stressful project to upgrade in terms of packages and error finding to make the app work. Initally i used the standard
+packages provided but as I completed the codelabs new errors emerged and then the app wouldn't compile.
 
 Key things that were upgraded in this project
 - Updating all depencies via project structures - This solved the error for creating the room database e.g. DAO and Entities. I needed gradle to be updated from 4 to 7
 - Navigation/ SafeArgs classpaths/implementation in build.grade (project and module) - resolved errors created from arch.navigation dependencies about passing arguments
 - In devbyte_Item.xml the MasterCardview widget needed another attribute  to make it work android:theme="@style/Theme.MaterialComponents.Light" - solved error
-of not inflating viewholder. 
-- @ Entity - the variables in this need to be var or else it doesn't work. 
-- removed lifecycle-extension as its deprecated. 
+of not inflating viewholder.
+- @ Entity - the variables in this need to be var or else it doesn't work.
+- removed lifecycle-extension as its deprecated.
 - updated the compileSdkVersion 31
-- resolving these errors finally made the app work the way it was meant to. 
+- resolving these errors finally made the app work the way it was meant to.
 
-Summary - I finally finished the codelab and now understand how to better use a repository. Some of the steps seem complicated due to the 'seperation of concerns' 
+Summary - I finally finished the codelab and now understand how to better use a repository. Some of the steps seem complicated due to the 'seperation of concerns'
 and mapping of the different data classes e.g. network, domain and database. Once you get your head around this its easier to understand to what data you convert so that it could
-be used in the right place. E.g converting network data to domain, so you can use the live data to update the TextView in the xml spreadsheet. 
+be used in the right place. E.g converting network data to domain, so you can use the live data to update the TextView in the xml spreadsheet.
 
 
 
@@ -121,16 +151,16 @@ be used in the right place. E.g converting network data to domain, so you can us
 
 **Today's Progress**:
 Today I finished section 8.2:  Loading and displaying images from the internet.
-I also focused on section 8.3: Filtering and detail views with internet data. 
+I also focused on section 8.3: Filtering and detail views with internet data.
 - I learnt how to use complex binding expressions in layout files.
 - I learnt how to make Retrofit requests to a web service with query options.
 - I modified the MarsRealEstate app to mark the Mars properties that are for sale (versus those that are for rent) with a dollar sign icon ( new use for frame Layout).
 - I used the options menu on the overview page to create a web service request that filters the Mars properties by type.
 - I created a detail fragment for a Mars property, hook up that fragment to the overview grid with navigation, and pass the property data into that fragment (parcelize).
 
-Im learning alot more, but some of it is confusing me as some of the patterns are being implemented in different ways, or the steps are different to previous code labs. 
-e.g. why do we initialise an application for the detailviewmodelfactory. This becomes clearer when other steps are added later and we use strings. 
-I also like the fact its confusing me as i need to pause and spend some time understanding where everything fits in when it comes to triggers - Live data binding with xml. 
+Im learning alot more, but some of it is confusing me as some of the patterns are being implemented in different ways, or the steps are different to previous code labs.
+e.g. why do we initialise an application for the detailviewmodelfactory. This becomes clearer when other steps are added later and we use strings.
+I also like the fact its confusing me as i need to pause and spend some time understanding where everything fits in when it comes to triggers - Live data binding with xml.
 
 The project I worked on this section is called '08_MarsRealEstate - Part 3'
 
@@ -138,13 +168,13 @@ The project I worked on this section is called '08_MarsRealEstate - Part 3'
 
 **Today's Progress**:
 Today I focused on section 8.2:  Loading and displaying images from the internet.
-- Today i have started this code lab and managed to complete up to section 4. I wasn't feeling so well so couldn't concentrate on the code. 
+- Today i have started this code lab and managed to complete up to section 4. I wasn't feeling so well so couldn't concentrate on the code.
 - I implement Glide into the project
 - I updated the OverView-ViewModel class to use live data for the parsed JSON Objects
 - I updated the res/layout/fragment_overview to bind the textView with the ViewModel
-- I created a binding adapter to pass to include in the xml file. 
+- I created a binding adapter to pass to include in the xml file.
 
-I still need to complete this lab and will finish it tmw. 
+I still need to complete this lab and will finish it tmw.
 
 The project I worked on this section is called '08_MarsRealEstate - Glide'
 
@@ -174,7 +204,7 @@ Today I focused on section 7.5:  Headers in RecyclerViews
 - I used a different ViewHolder for the header than for data items
 - Essentially the app will check the index of the list to determine which ViewHolder to use.
 
-This codelab was a bit diifcult to understand as it didn't go to much into depth but rather just provided code. I kind of understand how everything works and should be able to replicate it in my app. 
+This codelab was a bit diifcult to understand as it didn't go to much into depth but rather just provided code. I kind of understand how everything works and should be able to replicate it in my app.
 
 The project I worked on this section is called '07_TrackMySleepQuality - Headers in RV'
 
@@ -184,8 +214,8 @@ The project I worked on this section is called '07_TrackMySleepQuality - Headers
 **Today's Progress**:
 Today I focused on section 7.4:  Interacting with RecyclerView items
 - Build on an extended version of the TrackMySleepQuality app from previous codelabs in this series.
- - Add a click listener to your list and start listening for user interaction. When a list item is tapped, 
- it triggers navigation to a fragment with details on the clicked item. The starter code provides code for the detail fragment, 
+ - Add a click listener to your list and start listening for user interaction. When a list item is tapped,
+ it triggers navigation to a fragment with details on the clicked item. The starter code provides code for the detail fragment,
  as well as the navigation code.
 
 
@@ -206,7 +236,7 @@ Today I focused on section 7.3:  GridLayout and RecyclerView
 - I update the list_item_sleep_night.xml and removed the textview as we were using a different viewholder pattern/design
 - I updated the BindingApater util class to change into a companion object and used the @JvmStatic notation to resolve new runtime error that was stopping compliation
 
-Surprisingly this was an easy transtion from a LinerLayout to a Grid Layout. Very small changes where made the most important being bullet point three. 
+Surprisingly this was an easy transtion from a LinerLayout to a Grid Layout. Very small changes where made the most important being bullet point three.
 
 ### Day 18: December 7th, 2021 (Tuesday)
 
@@ -214,11 +244,11 @@ Surprisingly this was an easy transtion from a LinerLayout to a Grid Layout. Ver
 Today I focused on section 7.2:  DiffUtil and data binding with RecyclerView
 - I continued to build on the TrackMySleepQuality app from the previous codelab in this series.
 - I learnt how to use DiffUtil, a utility that calculates the difference between two lists to efficiently update a list displayed by RecyclerView.
-- I learnt how to use and tailor a ListView Adapter to make managing my list easier. (data changes to database). 
+- I learnt how to use and tailor a ListView Adapter to make managing my list easier. (data changes to database).
 - I learnt how to use data binding with RecyclerView.
 - I learnt to use binding adapters to transform data.
 
-The project I worked on this section is called '07_RecyclerViewFundamentals - List Adapter' - First part without Databinding. 
+The project I worked on this section is called '07_RecyclerViewFundamentals - List Adapter' - First part without Databinding.
 The project I worked on this section is called '07_TrackMySleepQuality - DataBinding with RV'
 
 
@@ -228,10 +258,10 @@ The project I worked on this section is called '07_TrackMySleepQuality - DataBin
 Today I focused on section 7.1: RecyclerView Fundamentals
 - I changed the TrackMySleepQuality app from the previous lesson to use a RecyclerView to display sleep-quality data.
 - I use a RecyclerView with an Adapter and a ViewHolder to display a list of items.
- 
-This was a good refresher for RecyclerViews. In terms of compartmentalising the code it did take me a while to sit and understand concepts. 
+
+This was a good refresher for RecyclerViews. In terms of compartmentalising the code it did take me a while to sit and understand concepts.
 In particular keeping the adapter logic seperate from the ViewHolder logic. This makes sense but was different to how i first built an app using recyclerview.  
-I still need to get my head around the use of a private constructor and benefits of inner classes. 
+I still need to get my head around the use of a private constructor and benefits of inner classes.
 
 The project I worked on this section is called '07_RecyclerViewFundamentals'
 
@@ -243,7 +273,7 @@ Today I focused on section 6.3: Use LiveData to control button states
 - I used LiveData to trigger navigation and the display of a snackbar.
 - I used LiveData to enable and disable buttons.
 
-This section was difficult to understand in terms of button states and using transformation to provide a boolean value from a different Type. 
+This section was difficult to understand in terms of button states and using transformation to provide a boolean value from a different Type.
 
 ### Day 15: December 3rd, 2021 (Friday)
 
@@ -254,9 +284,9 @@ Today I focused on section 6.2: Coroutines and Room Database
 - I learnt the use of suspend functions coupled with Co-routines.  This then helped me to run long-running database operations in the background.
 - In the process I learnt how threads work in Android and how to use Kotlin coroutines to move database operations away from the main thread.
 
-This codelab was difficult as there was a bug with the room library and it wasn't working with the suspend fucntion in my SleepDatabaseDao. 
-After an hour of searching on stake overflow and finding no soloution, i finally solved it by updating the room version to the latest alpha 
-version which accounted for the latest bugs. 
+This codelab was difficult as there was a bug with the room library and it wasn't working with the suspend fucntion in my SleepDatabaseDao.
+After an hour of searching on stake overflow and finding no soloution, i finally solved it by updating the room version to the latest alpha
+version which accounted for the latest bugs.
 
 The project I worked on this section is called '06_TrackMySleepQuality - Final'
 
@@ -264,10 +294,10 @@ The project I worked on this section is called '06_TrackMySleepQuality - Final'
 
 **Today's Progress**:
 Today I focused on section 6.1: Create a Room Database
-- I took an existing app and built the database portion of an app that tracks sleep quality. 
+- I took an existing app and built the database portion of an app that tracks sleep quality.
 - The app uses a database to store sleep data over time.
-- I created a Entity,Data Access Object and a Abstract Database Class Holder 
-- I created basic tests to verify the database works. 
+- I created a Entity,Data Access Object and a Abstract Database Class Holder
+- I created basic tests to verify the database works.
 
 
 The project I worked on this section is called 'Track My Sleep Quality'.
@@ -275,8 +305,8 @@ The project I worked on this section is called 'Track My Sleep Quality'.
   - Update Gradle from 4 to 7
   - Update JDK to 1.8
   - Update android to androidx for the navigation (safe args) dependencies
-  
-- There was a few compliation errors along the way which i solved with stackoverflow. 
+
+- There was a few compliation errors along the way which i solved with stackoverflow.
 
 
 ### Day 13: November 30th, 2021 (Tuesday)
@@ -293,8 +323,8 @@ The project I worked on this section is called 'Guess the word'.
 ### Day 12: November 29th, 2021 (Monday)
 
 **Today's Progress**:
-Today I focused on section 5.3: Data binding with ViewModel and Live Data. 
-I updated the app for 'Guess the word' and added the below elements. 
+Today I focused on section 5.3: Data binding with ViewModel and Live Data.
+I updated the app for 'Guess the word' and added the below elements.
 - I learnt how to integrate ViewModel with data binding.
 - I learnt how to integrate LiveData with data binding.
 - I learnt how to use listener bindings to replace the click listeners in a fragment.
@@ -306,25 +336,25 @@ The project I worked on this section is called 'Guess the word'.
 ### Day 11: November 28th, 2021 (Sunday)
 
 **Today's Progress**:
-Today I focused on section 5.2: LiveData and LiveData Observers. 
-- I updated the 'Guess the word' app to use LiveData, this way the variables in the viewmodel can only be accessed as read only by external classes. 
+Today I focused on section 5.2: LiveData and LiveData Observers.
+- I updated the 'Guess the word' app to use LiveData, this way the variables in the viewmodel can only be accessed as read only by external classes.
 - I learnt about Encapsulation and then used the kotlin backing property method to make changes to the variables e.g. score and word.
- 
-Understanding the code for this project was difficult at first but became more interesting as I found different ways to trigger the observers 
-e.g. using a button (attached to a  listener) to then   trigger a function in the view model which updates a LiveData<Boolean> function. 
- which can then trigger something else in your Activity or Fragment as the observer now been re-triggered. 
- 
+
+Understanding the code for this project was difficult at first but became more interesting as I found different ways to trigger the observers
+e.g. using a button (attached to a  listener) to then   trigger a function in the view model which updates a LiveData<Boolean> function.
+ which can then trigger something else in your Activity or Fragment as the observer now been re-triggered.
+
 The project I worked on this section is called 'Guess the word'.
 
 ### Day 10: November 27th, 2021 (Saturday)
 
 **Today's Progress**:
-Today I focused on section 5.1 focusing on View Models. 
+Today I focused on section 5.1 focusing on View Models.
 - I learnt what MVVM (model-view-viewmodel) architectural pattern is and why we want to retain UI data through device-configuration changes using ViewModel.
-  Note: there is a limitation of data that onSavedInstanceState can hold, a viewModel is more flexible. 
+  Note: there is a limitation of data that onSavedInstanceState can hold, a viewModel is more flexible.
 - I also learnt how to create a parameterized constructor for a ViewModel using the ViewModelFactory interface. Aswell as understanding
  when the factory method design pattern should be used and how to use it.
- Note: When you need the data right away when the viewModel is initialized. Instead of initilising variables within the viewmodel after it has been created. 
+ Note: When you need the data right away when the viewModel is initialized. Instead of initilising variables within the viewmodel after it has been created.
 
 The project I worked on this section is called 'Guess the word'.
 
@@ -347,26 +377,26 @@ Learnt how to set the argument passed in navigations programmatically or provide
         NavHostFragment.findNavController(this).navigate(action)
         viewModel.onGameFinishComplete()
 
-then on receiving fragment - use the .score variable once you have first created the arguments variable. 
+then on receiving fragment - use the .score variable once you have first created the arguments variable.
 //Initialise ViewModel Part 2
 val arguments = ScoreFragmentArgs.fromBundle(requireArguments())
         viewModelFactory = ScoreViewModelFactory(arguments.score)
-		
+
 		// option 2 - use directly if you only have 1 or two variables
 		viewModelFactory = ScoreViewModelFactory(ScoreFragmentArgs.fromBundle(requireArguments()).score)
- 
+
 ### Day 9: November 26th, 2021 (Friday)
 
 **Today's Progress**:
 Today I focused on section 4.1 Lifecycles and Logging.
-and 4.2 Complex lifecycle situations 
+and 4.2 Complex lifecycle situations
 
 - I modified a starter app called DessertClicker to add logging information that's displayed in the Logcat.
 - I used override lifecycle callback methods and logged changes to the activity state.
-- I learnt about the lifecycle for activities and how they work with lifecycles of fragments. 
+- I learnt about the lifecycle for activities and how they work with lifecycles of fragments.
 - I modified the app to use the Timber library for logging - https://github.com/JakeWharton/timber#download.
-- Finally i learnt how to use the Android lifecycle library to shift lifecycle control 
-from the activity or fragment to the actual component that needs to be lifecycle-aware making it easier to decouple code. 
+- Finally i learnt how to use the Android lifecycle library to shift lifecycle control
+from the activity or fragment to the actual component that needs to be lifecycle-aware making it easier to decouple code.
 
 The project I worked on this section is called 'DessertClicker'.
 
@@ -374,7 +404,7 @@ The project I worked on this section is called 'DessertClicker'.
 
 **Today's Progress**:
 Today I completed section 3.3: Start an external activity (SafeArgs and Implicit Intent).
--  In this codelab, I updated the AndroidTrivia app so that users can send their game results to other apps and share their results with friends. 
+-  In this codelab, I updated the AndroidTrivia app so that users can send their game results to other apps and share their results with friends.
 - The first part involved using Safe Args (by adding dependencies) in order to pass arguments between fragments (using NavDirections classes).
 - The second section involved sharing the game results by adding another menu option containing the share icon and using Implicit Intents to send information to other apps.
 
@@ -386,65 +416,65 @@ The project I worked on this section is called 'AndroidTrivia app'.
 Today I completed section 3.1: Create a Fragment
 - The first section was on creating a fragment
 
-I also completed section 3.2: Define navigation paths. 
+I also completed section 3.2: Define navigation paths.
 - I used an example app (AndroidTrivia) and created a navigation graph for fragments using the navigation library and the Navigation Editor.
 - I added a navigation using the options menu, then implemented an Up button so that the user can navigate back to the title screen
- from anywhere in the app. 
+ from anywhere in the app.
 - Finally I added a navigation drawer menu.
- 
- The provided app in 3.2 required alot of updates to make the project work with the lesson. 
- - update Gradle from 4 to 7, Kotlin, Java 1.7 to 1.8, respositories Jcenter to Maven Central. 
+
+ The provided app in 3.2 required alot of updates to make the project work with the lesson.
+ - update Gradle from 4 to 7, Kotlin, Java 1.7 to 1.8, respositories Jcenter to Maven Central.
  - Add to default Config {multiDexEnabled true}
- - Add to dependencies - implementation 'com.android.support:multidex:1.0.3' 
+ - Add to dependencies - implementation 'com.android.support:multidex:1.0.3'
  - in activity_main change the fragment<> to fragmentContainerView (had to change back to use NavHostFragment)
  - In Android Manifesto add the following 'android:exported="true"' within the activity <>
- - Use support fragment manager to find myNavHostFragment in Main Activity to then get navController, using .findNavController() function does not work in onCreate. 
+ - Use support fragment manager to find myNavHostFragment in Main Activity to then get navController, using .findNavController() function does not work in onCreate.
 
 The project I worked on this section is called 'AndroidTrivia App'.
 
 ### Day 6: November 22nd, 2021 (Monday)
 
-**Today's Progress**: 
+**Today's Progress**:
 
-Today I completed section 2.3: Constraint layouts using the Layout Editior. 
+Today I completed section 2.3: Constraint layouts using the Layout Editior.
 - I developed a new app that went over basic constraints, chain constraints and baseline constraints.
-- The code in the project used the same click handler to change the colour of different text views through user interaction e.g. views being tapped 
-or when specific buttons are pressed. 
+- The code in the project used the same click handler to change the colour of different text views through user interaction e.g. views being tapped
+or when specific buttons are pressed.
 
 The project I worked on this section is called 'Color my views'.
 
 Also completed section 2.4: Data Binding Basics.
- - The About Me app from 2.1 was adapted to use very basic databinding. 
+ - The About Me app from 2.1 was adapted to use very basic databinding.
 
 The project I worked on this section is called 'About Me'.
 
 ### Day 5: November 20th, 2021 (Saturday)
 
-**Today's Progress**: 
+**Today's Progress**:
 
 Today I completed Lesson 2.2: Add user interactivity.
-- I extended an existing app and added a nickname field, a DONE button, and a text view to display the nickname. 
+- I extended an existing app and added a nickname field, a DONE button, and a text view to display the nickname.
 
-Once the user enters a nickname and taps the DONE button,the text view updates to show the entered nickname. 
+Once the user enters a nickname and taps the DONE button,the text view updates to show the entered nickname.
 
 The project i worked on this section is called 'About Me'.
 
 ### Day 4: November 19th, 2021 (Friday)
 
-**Today's Progress**: 
+**Today's Progress**:
 
 Today I completed Lesson 2.1:Linear layout using the Layout Editor.
 - I learnt about storing different Resources Values within res>values folder e.g. dimensions, style and how to use the scrollable feature within a view.
 
 The project i worked on this section is called 'About Me'.
-  
+
 
 ### Day 3: November 18th, 2021 (Thursday)
 
-**Today's Progress**: 
+**Today's Progress**:
 
-Today I completed the remaining sections in Lesson 1: Build your first app. 
-- I went over basic app anatomy, layouts, image resources and compatibility. 
+Today I completed the remaining sections in Lesson 1: Build your first app.
+- I went over basic app anatomy, layouts, image resources and compatibility.
 - I created 2 basic apps using simple code logic; Dice Roller and another app using the Basic Template.
 
 Having done android before, the course hasn't gone into anything new but i do like the refresher on layouts and understanding better code solutions to challenges given in the course.  
@@ -452,29 +482,29 @@ Having done android before, the course hasn't gone into anything new but i do li
 
 ### Day 2: November 17th, 2021 (Wednesday)
 
-**Today's Progress**: 
+**Today's Progress**:
 
-Spent some time today building out my github profile and learning how to using Github and Github Desktop. This has given me a peace of mind as i am able to track my progress better on github. 
+Spent some time today building out my github profile and learning how to using Github and Github Desktop. This has given me a peace of mind as i am able to track my progress better on github.
 
 I also started the Android Kotlin Fundamentals Course, completing Lessons 1.0 and 1.1.
 
 ### Day 1: November 16th, 2021 (Tuesday)
 
-**Today's Progress**: 
+**Today's Progress**:
 
 Set up github account, created a repo and went on developers.android to review the course content for Android Kotlin Fundamentals.
 
-In terms of my baseline, i have already done a extensive online course and have some knowledge of Android/Kotlin. The course was created in 2019 and currently outdated hence the refresher to go over some of the new libraries and ways of doing things. 
+In terms of my baseline, i have already done a extensive online course and have some knowledge of Android/Kotlin. The course was created in 2019 and currently outdated hence the refresher to go over some of the new libraries and ways of doing things.
 
-**Link to new course:** 
+**Link to new course:**
 [Android Kotlin Fundamentals](https://developer.android.com/courses/kotlin-android-fundamentals/overview)
 [Android Kotlin Fundamentals - Lesson Breakdown](https://developer.android.com/courses/kotlin-android-fundamentals/toc)
 
-**Link to previous course:** 
+**Link to previous course:**
 [Android App Development Masterclass using Kotlin](https://www.udemy.com/course/android-oreo-kotlin-app-masterclass/)
 
 
-**Link to new advanced course:** 
+**Link to new advanced course:**
 https://developer.android.com/codelabs/advanced-android-kotlin-training-welcome#0
 [Android Kotlin Advanced](https://developer.android.com/courses/kotlin-android-advanced/overview)
-[Android Kotlin ADvanced - Lesson Breakdown] (https://developer.android.com/courses/kotlin-android-advanced/toc)
+[Android Kotlin Advanced - Lesson Breakdown] (https://developer.android.com/courses/kotlin-android-advanced/toc)
