@@ -1,0 +1,70 @@
+
+
+
+### Day 36: January 15th 2022 ()
+
+**Today's Progress**:
+Today i worked on 'Unit2: ScrollView Section'. I worked on a new app called "Affirmations"
+
+Things i did today
+- I recapped how to use lists in Kotlin. 
+- Setup a RecyclerView to display a scrollable-list of textViews. 
+- I updated the app to display an image along with a textView. 
+- I used material design to implement the use of Cards. 
+
+This section also went into unit testing alot more.
+- The fundamentals of writing a test.
+- How to add testing-specific Gradle dependencies.
+-How to test lists with instrumentation tests.
+
+
+#MaterialCardView #CreatingPackages #WrtitingTests
+
+### Day 35: January 14th 2022 ()
+
+**Today's Progress**:
+Today i worked on 'Unit2: Layouts'. I updated the Tipping Calculator App and carried the code labs on from yesterday. 
+
+I looked at concepts such as 
+- Material Design - Updating Theme to used more polished designs e.g switches, edit textfields(outlined)
+- Using 'TalkBack' to look at the accessibility implementation of the app
+- Wrote basic instrumentation Tests using Junit and Expresso Library
+
+I also relearnt how to use intelliJ - it took 1.5 hours to set up the environment and familiarise myself with it again. 
+
+#MaterialDesign(EditTextField.Outline)
+
+### Day 34: January 4th 2022 (Tuesday)
+
+**Today's Progress**:
+Today i worked on 'Unit2: Layouts'. 
+This training codelab was really useful for implementing material design concepts. This section was more practical than the previous course.  
+You really had to get into the code by using the XML for implementing the theme and style of the app.  
+
+Useful Feature - Format number into a currency based on the locale setting on someones phone. 
+val formattedNumber: String = NumberFormat.getCurrencyInstance.format(Int)
+
+#MaterialDesign(Part2)   #ViewBinding(Part1) #InstumentTest(Part2) #ChangeIcon(part2) #ChangeTheme/Style(Part1)
+
+
+
+
+Useful Links
+
+Learn the basics of Android Test - Unit Test
+https://developer.android.com/codelabs/android-basics-kotlin-testing-basics?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-two%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-testing-basics#0
+
+Create a Birthday message in Kotlin
+https://developer.android.com/codelabs/basic-android-kotlin-training-kotlin-birthday-message?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-one%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-kotlin-birthday-message#5
+
+Learn to do Android Test -  InstumentTest
+Set up Expresso - https://developer.android.com/training/testing/espresso/setup#set-up-environment
+Code Lab - https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-2-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-write-instrumentation-tests#0
+
+
+Change the app Icon/ Theme / Style 
+https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2#codelab-https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests
+
+Adding a recyclerView to the app - List Layout!
+https://developer.android.com/codelabs/basic-android-kotlin-training-recyclerview-scrollable-list?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-2-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-recyclerview-scrollable-list#3
+
