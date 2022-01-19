@@ -1,5 +1,131 @@
 # 100 Days Of Code (Kotlin) - Log
 
+### Day 37: January 17th 2022
+
+**Today's Progress**:
+
+Good section on Higher Order Functions and Lambda Expressions
+https://developer.android.com/codelabs/basic-android-kotlin-training-collections?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-collections#3
+
+Built a new app - Word app
+- Using intents to move from one activity to another.
+- This was a strange layout choice in the sense the main activity was a recyclerView, then when you clicked an item it went to another activity with a recyclerView
+
+Something interesting i learned is that you can update a variable to the opposite ..for example
+var isCoinHead = true  (top class variable)
+ within a function you can then set it to false by using
+ isCoinHead = !isCoinHead  - this will set it to the opposite value in this case false
+ if this was then added to code again it would change the false to true.
+
+ Learnt how to use companion objects. you can use a const value in a different class without needing to instantiate the containing class.
+example.
+class DetailActivity(){
+companion object {const val LETTER = "Letter"}}
+
+Now if i was in the MainActivity class i could call this value without needing to initialise the DetailActivity class to get the value. I would do this
+by calling DetailActivity.LETTER to input it into a function or store it in variable.
+
+
+
+### Day 36: January 16th 2022 ()
+
+**Today's Progress**:
+Today i worked on 'Unit2: ScrollView Section'. I completed the test for adding changes to the "Dogglers App"
+
+Test Scenario: To add code to the app, so that its powered by the same adapter class. I will need to build the layouts for the recycler view cards, and then implement the adapter so that
+each item is populated with the information about each dog.
+
+What i learnt form this test is that the structure is easy
+- Create layouts - FrameLayout with recycler view. Within the XML configure it for the layout you want e.g grid, linear or horizontal.
+- Create listItem Layout for corresponding layouts above. think about how these will be display and design the layout to be structure vertically or horizontally.
+- Create the Adapter Class - Nest the viewHolder Class within it.  ( you can add a static data (set data) and initialise it here) but i don't recommend this other than for simple apps.
+- In the ViewHolder Class use view.findViewById to assign them to a variable to be used later.
+- Extend the Adapter class to be RecyclerView.Adapter and implement the override functions.
+
+What was interesting about this piece of code was that we had to use the same adapter class. Therefore we needed to find a way to bind the viewHolder depending on the layout.
+- In the file there was an object class created for us with values assgined to each Layout  val VERTICAL = 1  - This was similar to creating an enum class.
+- This object was then passed into the constructor of Adapter Class to be used in the onCreatViewHolder method. we used a when statement to inflate a different
+  layout for each RecyclerView type e.g. grid, linear.
+- This mean that when main Activity call the intent to start another activity e.g. Grid Activity, the Grid Activity Class will initialise the adapter class with the layout property e.g. Layout.Grid
+
+- I also learnt to initialise an object, you don't need to create it you just need to call it as the object has already been defined ... Layout.VERTICAL
+
+object Layout {
+    val VERTICAL = 1
+    val HORIZONTAL = 2
+    val GRID = 3
+}
+
+- What was also useful is to learn how to use a mixture of object value with string values that contain an option for add a parameter e.g.
+<string name="dog_age">Age: %1$s</string>
+
+see example
+  override fun onBindViewHolder(holder: DogCardViewHolder, position: Int) {
+
+        val dogItem = data[position]
+        holder.dogPicture.setImageResource(dogItem.imageResourceId) // We just want the int value for the drawable - this was define in the object for list<Dog>
+        holder.dogName.text = dogItem.name // here we want the actual string value from the data object.
+        holder.dogAge.text = context?.resources?.getString(R.string.dog_age, dogItem.age)
+        // above line we want to use the string place holder R.string.dog age and then pass item.age(dog.age) value which will be used as a string parameter.
+        holder.dogHobby.text = context?.resources?.getString(R.string.dog_hobbies, dogItem.hobbies)
+
+- Make sure the context is in the constructor for the Adapter Class.
+In the main (grid)activity pass it the 'applicationContext'
+  binding.gridRecyclerView.adapter = DogCardAdapter(
+            applicationContext,
+            Layout.GRID
+        )		
+
+#RecyclerView(Linear, Horizontal, Grid)
+
+
+### Day 36: January 15th 2022
+
+**Today's Progress**:
+Today i worked on 'Unit2: ScrollView Section'. I worked on a new app called "Affirmations"
+
+Things i did today
+- I recapped how to use lists in Kotlin.
+- Setup a RecyclerView to display a scrollable-list of textViews.
+- I updated the app to display an image along with a textView.
+- I used material design to implement the use of Cards.
+
+This section also went into unit testing alot more.
+- The fundamentals of writing a test.
+- How to add testing-specific Gradle dependencies. (For both Unit and Instrument Testing)
+-How to test lists with instrumentation tests.
+- Difference between Unit Test (test on JVM machine - local laptop_) and Instrument Test (Tests on device)
+
+
+#MaterialCardView #CreatingPackages #WrtitingTests #UnitTests #InstrumentTests
+
+### Day 35: January 14th 2022
+
+**Today's Progress**:
+Today i worked on 'Unit2: Layouts'. I updated the Tipping Calculator App and carried the code labs on from yesterday.
+
+I looked at concepts such as
+- Material Design - Updating Theme to used more polished designs e.g switches, edit textfields(outlined)
+- Using 'TalkBack' to look at the accessibility implementation of the app
+- Wrote basic instrumentation Tests using Junit and Expresso Library
+
+I also relearnt how to use intelliJ - it took 1.5 hours to set up the environment and familiarise myself with it again.
+
+#MaterialDesign(EditTextField.Outline)
+
+### Day 34: January 12th 2022
+
+**Today's Progress**:
+Today i worked on 'Unit2: Layouts'.
+This training codelab was really useful for implementing material design concepts. This section was more practical than the previous course.  
+You really had to get into the code by using the XML for implementing the theme and style of the app.  
+
+Useful Feature - Format number into a currency based on the locale setting on someones phone.
+val formattedNumber: String = NumberFormat.getCurrencyInstance.format(Int)
+
+#MaterialDesign(Part2)   #ViewBinding(Part1) #InstumentTest(Part2) #ChangeIcon(part2) #ChangeTheme/Style(Part1)
+
+
 
 ## Day 33: January 11th 2022 (Tuesday)
 
