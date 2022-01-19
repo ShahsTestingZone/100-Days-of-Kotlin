@@ -42,8 +42,7 @@ The plan of action is
 - Build My own Project.
 - Do Android tutorial for AWS AppSync/Amplify. Some Knowledge on NodeJS is required.
 
-
-
+Today i haven't done any coding, but I am creating a plan of action for the following days to come.  
 
 ### Day 30: December 22nd, 2021 (Wednesday)
 
