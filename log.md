@@ -1,6 +1,6 @@
 # 100 Days Of Code (Kotlin) - Log
 
-### Day 37: January 17th 2022
+## Day 37: January 17th 2022
 
 **Today's Progress**:
 
@@ -27,7 +27,7 @@ by calling DetailActivity.LETTER to input it into a function or store it in vari
 
 
 
-### Day 36: January 16th 2022 ()
+## Day 36: January 16th 2022 ()
 
 **Today's Progress**:
 Today i worked on 'Unit2: ScrollView Section'. I completed the test for adding changes to the "Dogglers App"
@@ -79,7 +79,7 @@ In the main (grid)activity pass it the 'applicationContext'
 #RecyclerView(Linear, Horizontal, Grid)
 
 
-### Day 36: January 15th 2022
+## Day 36: January 15th 2022
 
 **Today's Progress**:
 Today i worked on 'Unit2: ScrollView Section'. I worked on a new app called "Affirmations"
@@ -99,7 +99,7 @@ This section also went into unit testing alot more.
 
 #MaterialCardView #CreatingPackages #WrtitingTests #UnitTests #InstrumentTests
 
-### Day 35: January 14th 2022
+## Day 35: January 14th 2022
 
 **Today's Progress**:
 Today i worked on 'Unit2: Layouts'. I updated the Tipping Calculator App and carried the code labs on from yesterday.
@@ -113,7 +113,7 @@ I also relearnt how to use intelliJ - it took 1.5 hours to set up the environmen
 
 #MaterialDesign(EditTextField.Outline)
 
-### Day 34: January 12th 2022
+## Day 34: January 12th 2022
 
 **Today's Progress**:
 Today i worked on 'Unit2: Layouts'.
@@ -127,7 +127,7 @@ val formattedNumber: String = NumberFormat.getCurrencyInstance.format(Int)
 
 
 
-## Day 33: January 11th 2022 (Tuesday)
+## Day 33: January 11th 2022
 
 **Today's Progress**:
 Yesterday i discovered that google have updated their Kotlin Fundamentals Course with a course called Kotlin Basics.
@@ -156,7 +156,7 @@ On a  separate note i went down a big rabbit hole, looking at integrating web3 t
 I will add this to the list of projects I want to build! Overall this area is very exciting!!!
 
 
-### Day 31: January 4th 2022 (Tuesday)
+## Day 31: January 4th 2022 (Tuesday)
 
 **Today's Progress**:
 I have taken a two week break for christmas and now need to get my routine going again.
