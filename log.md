@@ -1,6 +1,54 @@
 # 100 Days Of Code (Kotlin) - Log
 
-## Day 37: January 17th 2022
+
+## Day 39: February 11th 2022
+.
+**Today's Progress**:
+Today i finished the modified word app (Word App Nav) and now will work on running tests on the program. 
+- Testing this app is now different from testing navigation without the use of navigation components. So different test libraries are now required.
+- Really usefeul codelab for understanding Test for Fragments and how they differ from Activities
+- Use the @Before and @After to set up/tear down repetive code you need to repeat for every test. 
+- Use @BeforeCLass and @AfterClass (require to be in a companion object and to execute code only once. @BeforeClass runs once before anything in the class runs and @AfterClass runs once after everything else in the class has run.
+- Methods annotated with @BeforeClass and @AfterClass must be placed in a companion object and annotated with @JvmStatic. 
+- When doing this codelab the test only passes when you use a older version of androidTestImplementation 'androidx.navigation:navigation-testing:2.3.5'
+- Also the test does not work if you reference mainActivity for setting the appbar title. 
+
+Learnt 
+About branching on git and how to save different codes in different branches. This will help organise my portfolio alot better instead of uploading various projects. 
+
+
+## Day 38: February 9th 2022
+
+**Today's Progress**:
+Today I continued to work on the modified word app
+- One problem i came across was setting the title of the appbar that appears in a fragment
+- This is easy to do on activity as you use the built in reference label 'title =' but for fragements you need to use an alternative approach'
+- You can either do this in code using 
+        (activity as MainActivity).supportActionBar?.title =getString(R.string.detail_prefix) + " " + letterId
+		if you use above you might find it difficult to test fragment using navigation compenents. 
+- or set it in the navigation XML file by adding a string and then adding a label with the navigation studio. Use the parameter passed in the safeargs.
+     <string name="word_list_fragment_label">Words That Start With {letter}</string>
+	 letter is the safeargs argument passed in from the previous fragment. 
+
+## Day 37: February 8th 2022
+
+**Today's Progress**:
+Today i was working on navigation components
+- I modified the word app to use navigation components instead of multiple activity screens. 
+- This involved refractoring the app e.g swapping out intents (between activities) for safeargs arguments. 
+
+Note: Studying whilst in Mexico and my laptop decided to break. It is still usuable but hanging off one screen hinge and the bottom righter corner of the screen is cracked.  
+
+
+
+## BREAK FROM CODING (18th January - 8th February)
+During this time 
+- I was updating my CV
+- Updating my LinkedIn
+- Learning and researching techinical interview questions. 
+
+
+## Day 37: January 17th 2022 
 
 **Today's Progress**:
 
