@@ -1,6 +1,49 @@
 # 100 Days Of Code (Kotlin) - Log
 
 
+## Day 42: February 17th 2022
+
+**Today's Progress**:
+
+Codelab for Cupcake App (different to fundamentals)
+https://developer.android.com/codelabs/basic-android-kotlin-training-shared-viewmodel?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-shared-viewmodel#6
+- The provided code did not work - so i made my own project and carried the resources over. This was simplier than trying to fix the outdated code. 
+
+The process was same as previous cupcake up the difference being the specific viewmodel for an shared viewmodel (activityViemodel)
+Integrating the live data with listener bindings (onclick) was also pretty easy. 
+
+
+Codelab - Navigation and BackStack Cupcake app
+https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#1
+-  Implement Up button behavior using Navigation and custom behavior 
+- Custome behaviour included using popUpOf (take off backstack) and popInclusiveTo (going back to the first fragment)
+- Adding intent to send via email 
+
+
+## Day 41: February 15th 2022
+
+**Today's Progress**:
+Today I working with the unscrambler app
+- Use LiveData for the app's data (word, word count and the score) in the Unscramble app.
+- Add observer methods that get notified when the data changes, update the scrambled word text view automatically.
+- Write binding expressions in the layout file, which are triggered when the underlying LiveData is changed. The score, word count and the scrambled word text views are updated automatically.
+
+
+
+
+## Day 40: February 14th 2022
+.
+**Today's Progress**:
+Today I worked on a new app - Unscrambller Word App.
+This code lab was good for adding 
+- a Viewmodel 
+- a Alert Dialogue
+- going over fragment lifecycle.  
+
+I couldn't complete the code lab in one sitting as my internet connection was bad. 
+
+Codelab - Unscrambled App 
+
 ## Day 39: February 11th 2022
 .
 **Today's Progress**:
