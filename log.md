@@ -1,6 +1,6 @@
 # 100 Days Of Code (Kotlin) - Log
 
-## Day 43: March 2nd 2022
+## Day 44: March 2nd 2022
 
 **Today's Progress**:
 Not been able to focus on coding as i didn't have stable internet connection. I have now moved to a better place with better wifi (Mexico)
@@ -13,6 +13,12 @@ Codelab for LunchTray App
 https://developer.android.com/codelabs/basic-android-kotlin-training-project-lunch-tray?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-project-lunch-tray#2
 
 Finished half the codelab
+
+## Day 43: March 2nd 2022
+
+**Today's Progress**:
+Tried downloading codelab for lunch-tray app but not working correctly. need to trouble shoot
+
 
 
 ## Day 42: February 17th 2022

@@ -84,6 +84,25 @@ Kotlin Fundamentals
 section 7.2:  DiffUtil and data binding with RecyclerView
 8.2:  Loading and displaying images from the internet
 
+Databinding in xml
+
+When initalising viewmodels or fragments so you can use properties and functions
+<variable
+    name="viewModel"
+    type="com.example.lunchtray.model.OrderViewModel" />
+
+<variable
+    name="EntreeMenuFragment"
+    type="com.example.lunchtray.ui.order.EntreeMenuFragment" />
+
+When using a value or varibale us syntax below
+   android:text='@{viewModel.menuItems["pasta"].name}'
+When using a function use syntax below
+    android:onClick='@{() -> viewModel.setEntree("pasta")}'/>
+When updating string formating in xml layout use below
+
+
+
 **Simple DataFormat**
 https://developer.android.com/codelabs/basic-android-kotlin-training-shared-viewmodel?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-shared-viewmodel#6
 
