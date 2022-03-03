@@ -1,5 +1,19 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 43: March 2nd 2022
+
+**Today's Progress**:
+Not been able to focus on coding as i didn't have stable internet connection. I have now moved to a better place with better wifi (Mexico)
+
+Learning lesson - this codelab was created in eclipse and needed to be converted to gradle. When i downloaded the project and opened it using android studio it did not compile.  Here is the 
+learning lesson, instead of open use 'Import Project', this will convert the project for you!!
+I was stuck on this problem previusly for 3 days trying to compile this code lab. 
+
+Codelab for LunchTray App
+https://developer.android.com/codelabs/basic-android-kotlin-training-project-lunch-tray?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-project-lunch-tray#2
+
+Finished half the codelab
+
 
 ## Day 42: February 17th 2022
 
