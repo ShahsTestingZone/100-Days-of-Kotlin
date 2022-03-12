@@ -1,6 +1,6 @@
 # 100 Days Of Code (Kotlin) - Log
 
-## Day 44: March 2nd 2022
+## Day 44: March 3rd 2022
 
 **Today's Progress**:
 Not been able to focus on coding as i didn't have stable internet connection. I have now moved to a better place with better wifi (Mexico)
