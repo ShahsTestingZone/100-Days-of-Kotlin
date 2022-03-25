@@ -4,6 +4,10 @@
 **Today's Progress**:
 Today i started Unit 4: Connect to the Internet (Retrofit and Coil)
 - Pathway 1 - Introduction to Co-routines (Concurrency and Multithreading)
+- Parse the JSON response from the web service into the app's LiveData objects with the Moshi library
+
+This was a good refresher in terms of setting up the API. 
+
 
 ## Day 45: March 24th 2022
 **Today's Progress**:

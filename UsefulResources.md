@@ -110,6 +110,18 @@ When updating string formating in xml layout use below - Example of sting format
 **Simple DataFormat**
 https://developer.android.com/codelabs/basic-android-kotlin-training-shared-viewmodel?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-shared-viewmodel#6
 
+**Date Time Formatter**
+
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+val formatter = DateTimeFormatter.ISO_LOCAL_TIME
+val time = { formatter.format(LocalDateTime.now()) }
+
+    println("entering getValue() at ${time()}")
+Output: entering getValue() at 17:44:52.311
+
+
 ** Implement Up button behavior using Navigation Controller**
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#2
 
@@ -118,3 +130,65 @@ https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-
 
 **Plural Strings - Useful for string structure when defining quantites**
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#4
+
+**Retrofit (Parsing JSON)**
+https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-getting-data-internet#4
+
+// Retrofit 
+Open module level gradle file, build.gradle (Module: MarsPhots.app) and add the below
+
+implementation "com.squareup.retrofit2:retrofit:2.9.0"
+// Retrofit with Moshi Converter
+implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+
+Many third party libraries including Retrofit2 use Java 8 language features. The Android Gradle plugin provides built-in support for using certain Java 8 language features.
+To use the built-in features, you need the following code in your module's build.gradle fil
+
+android {
+  ...
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+}
+
+**Parse the JSON response with Moshi**
+https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-getting-data-internet#7
+
+There's an external library called Moshi, which is an Android JSON parser that converts a JSON string into Kotlin objects. Retrofit has a converter that works with Moshi, so it's a great library for your purposes here.
+Open build.gradle (Module: app).
+// Moshi
+implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
+
+// Retrofit with Moshi Converter
+implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+**Internet Permissions**
+Open manifests/AndroidManifest.xml. 
+Add this line just before the <application> tag:
+
+<uses-permission android:name="android.permission.INTERNET" />
+
+**JSON to Kotlin Data Class**
+Install Plugin and follow tutorial
+https://plugins.jetbrains.com/plugin/9960-json-to-kotlin-class-jsontokotlinclass-
+
+**JSON Beautify**
+https://codebeautify.org/jsonviewer
+
+**JSON Validator**
+https://www.jsonschemavalidator.net/
+
+**JSON Annotation**
+@Json Annotation
+Sometimes the key names in a JSON response can make confusing Kotlin properties, or may not match recommended coding style—for example, in the JSON file the img_src key uses an underscore, 
+whereas Kotlin convention for properties use upper and lowercase letters ("camel case").
+
+To use variable names in your data class that differ from the key names in the JSON response, 
+use the @Json annotation. 
+In this example, the name of the variable in the data class is imgSrcUrl. The variable can be mapped to the JSON attribute img_src using @Json(name = "img_src").
