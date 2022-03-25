@@ -20,6 +20,10 @@ https://developer.android.com/codelabs/android-basics-kotlin-test-viewmodel-and-
 *Testing Navigation Components*
 https://developer.android.com/codelabs/android-basics-kotlin-test-navigation-components?continue=https%3A%2F%2Fdeveloper.android.com%2Fcoursoes%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-test-navigation-components#5
 
+General Test (Base TEst, Menu Contents, Naivgation, Order Functionality)
+Use the Lunch Tray App as reference, as it has some well written test in there for different situations. 
+
+
 ===========================================================================================================================================
 
 **Change the app Icon/ Theme / Style **
@@ -99,8 +103,8 @@ When using a value or varibale us syntax below
    android:text='@{viewModel.menuItems["pasta"].name}'
 When using a function use syntax below
     android:onClick='@{() -> viewModel.setEntree("pasta")}'/>
-When updating string formating in xml layout use below
-
+When updating string formating in xml layout use below - Example of sting formatting <string name="subtotal">Subtotal: %s</string>
+	android:text='@{@string/subtotal(viewModel.subtotal)}'
 
 
 **Simple DataFormat**

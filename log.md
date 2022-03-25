@@ -1,5 +1,25 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 45: March 25th 2022
+**Today's Progress**:
+Today i started Unit 4: Connect to the Internet (Retrofit and Coil)
+- Pathway 1 - Introduction to Co-routines (Concurrency and Multithreading)
+
+## Day 45: March 24th 2022
+**Today's Progress**:
+Today i finished the Lunch Tray App Test. This was a great practical test as it had alot of architecture components and some complex logic.The instructions were missing some important parts to get the tests to pass but i managed to work it out.  
+- I will use this project as reference
+- Topics included; Navigation, Shared Viewmodel, Databinding, Tests
+- The test in this package are really good to use as reference. 
+
+
+## BREAK FROM CODING (4th March - 23rd March)
+During this time 
+- I returned back to the UK from Mexico
+- Needed to complete life admin tasks and settle back in to a normal routine
+- Also spent this time applying for jobs in Android
+
+
 ## Day 44: March 3rd 2022
 
 **Today's Progress**:
@@ -17,7 +37,7 @@ Finished half the codelab
 ## Day 43: March 2nd 2022
 
 **Today's Progress**:
-Tried downloading codelab for lunch-tray app but not working correctly. need to trouble shoot
+Tried downloading codelab for lunch-tray app but not working correctly. Need to trouble shoot
 
 
 
@@ -36,7 +56,7 @@ Integrating the live data with listener bindings (onclick) was also pretty easy.
 Codelab - Navigation and BackStack Cupcake app
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#1
 -  Implement Up button behavior using Navigation and custom behavior 
-- Custome behaviour included using popUpOf (take off backstack) and popInclusiveTo (going back to the first fragment)
+- Custom behaviour included using popUpOf (take off backstack) and popInclusiveTo (going back to the first fragment)
 - Adding intent to send via email 
 
 
