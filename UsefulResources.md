@@ -5,7 +5,9 @@ https://developer.android.com/codelabs/android-basics-kotlin-testing-basics?cont
 
 
 **Learn to do Android Test -  InstumentTest**
+
 Set up Expresso - https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
 Code Lab - https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-2-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-write-instrumentation-tests#0
 
 CodeLab 2 -
@@ -20,8 +22,8 @@ https://developer.android.com/codelabs/android-basics-kotlin-test-viewmodel-and-
 *Testing Navigation Components*
 https://developer.android.com/codelabs/android-basics-kotlin-test-navigation-components?continue=https%3A%2F%2Fdeveloper.android.com%2Fcoursoes%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-test-navigation-components#5
 
-General Test (Base TEst, Menu Contents, Naivgation, Order Functionality)
-Use the Lunch Tray App as reference, as it has some well written test in there for different situations. 
+General Test (Base Test, Menu Contents, Navigation, Order Functionality)
+Use the Lunch Tray App as reference, as it has some well written test in there for different situations.
 
 
 ===========================================================================================================================================
@@ -46,9 +48,9 @@ https://developer.android.com/codelabs/basic-android-kotlin-training-shared-view
 **Backing Properties (Encapsulation)**
 https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-viewmodel#4
 
-private var _currentWordCount = 0
+    private var _currentWordCount = 0
     val currentWordCount: Int get() = _currentWordCount
-	
+
 
 **Dialogue (adding an alert dialogue to the app)**
 https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-viewmodel#7
@@ -56,55 +58,59 @@ https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel?c
 **LiveData and Mutable LiveData**
 https://developer.android.com/codelabs/basic-android-kotlin-training-livedata?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-livedata#3
 
-since mutable live data is the object we can use val. the actual value will be saved in the object property. 
+since mutable live data is the object we can use val. the actual value will be saved in the object property.
 
-private val _currentScrambledWord = MutableLiveData<String>()
+    private val _currentScrambledWord = MutableLiveData<String>()
     val currentScrambledWord: LiveData<String>
         get() = _currentScrambledWord
 
-you access/set the property by using -currentScrambledWord.value = ""
+  you access/set the property by using -currentScrambledWord.value = ""
 
 https://developer.android.com/codelabs/basic-android-kotlin-training-livedata?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-livedata#5
 When it comes to integers and doing maths, Android Studio will show you an error because _score is no longer an integer, it's LiveData.
 Use the plus() Kotlin function to increase the _score value, which performs the addition with null-safety.
- _score.value = (_score.value)?.plus(SCORE_INCREASE)
- 
-another examle for increments
-++_currentWordCount
-this will need to be converted to the below. 
- _currentWordCount.value = (_currentWordCount.value)?.inc()
- 
+
+        _score.value = (_score.value)?.plus(SCORE_INCREASE)
+
+        another example for increments
+        ++_currentWordCount
+        this will need to be converted to the below.
+        _currentWordCount.value = (_currentWordCount.value)?.inc()
+
 **Data Binding**
 https://developer.android.com/codelabs/basic-android-kotlin-training-livedata?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-livedata#6
 
-In your app, the LiveData object or the observable data is the price property in the view model. The lifecycle owners are the flavor, pickup and the summary fragments. The LiveData observers are the binding expressions in layout files with observable data like price. With Data Binding, when an observable value changes, the UI elements it's bound to are updated automatically.
+In your app, the LiveData object or the observable data is the price property in the view model. The lifecycle owners are the flavour, pickup and the summary fragments. The LiveData observers are the binding expressions in layout files with observable data like price. With Data Binding, when an observable value changes, the UI elements it's bound to are updated automatically.
 
 Example of binding expression: android:text="@{@string/subtotal_price(viewModel.price)}"
 
 For the UI elements to automatically update, you have to associate binding.lifecycleOwner
 
 **Binding Adapters/ Expressions**
-Kotlin Fundamentals 
+Kotlin Fundamentals
 section 7.2:  DiffUtil and data binding with RecyclerView
 8.2:  Loading and displaying images from the internet
 
 Databinding in xml
 
 When initalising viewmodels or fragments so you can use properties and functions
-<variable
+
+    <variable
     name="viewModel"
     type="com.example.lunchtray.model.OrderViewModel" />
 
-<variable
+    <variable
     name="EntreeMenuFragment"
     type="com.example.lunchtray.ui.order.EntreeMenuFragment" />
 
-When using a value or varibale us syntax below
-   android:text='@{viewModel.menuItems["pasta"].name}'
-When using a function use syntax below
+    When using a value or varibale us syntax below
+    android:text='@{viewModel.menuItems["pasta"].name}'
+
+    When using a function use syntax below
     android:onClick='@{() -> viewModel.setEntree("pasta")}'/>
-When updating string formating in xml layout use below - Example of sting formatting <string name="subtotal">Subtotal: %s</string>
-	android:text='@{@string/subtotal(viewModel.subtotal)}'
+
+    When updating string formating in xml layout use below - Example of sting formatting <string name="subtotal">Subtotal: %s</string>
+	  android:text='@{@string/subtotal(viewModel.subtotal)}'
 
 
 **Simple DataFormat**
@@ -112,67 +118,69 @@ https://developer.android.com/codelabs/basic-android-kotlin-training-shared-view
 
 **Date Time Formatter**
 
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
+    import java.time.LocalDateTime
+    import java.time.format.DateTimeFormatter
 
-val formatter = DateTimeFormatter.ISO_LOCAL_TIME
-val time = { formatter.format(LocalDateTime.now()) }
+    val formatter = DateTimeFormatter.ISO_LOCAL_TIME
+    val time = { formatter.format(LocalDateTime.now()) }
 
     println("entering getValue() at ${time()}")
-Output: entering getValue() at 17:44:52.311
+
+    Output: entering getValue() at 17:44:52.311
 
 
-** Implement Up button behavior using Navigation Controller**
+** Implement Up button behaviour using Navigation Controller**
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#2
 
 **Using email Intent**
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#4
 
-**Plural Strings - Useful for string structure when defining quantites**
+**Plural Strings - Useful for string structure when defining quantities**
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#4
 
 **Retrofit (Parsing JSON)**
 https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-getting-data-internet#4
 
-// Retrofit 
-Open module level gradle file, build.gradle (Module: MarsPhots.app) and add the below
+    // Retrofit
+    Open module level gradle file, build.gradle (Module: MarsPhots.app) and add the below
 
-implementation "com.squareup.retrofit2:retrofit:2.9.0"
-// Retrofit with Moshi Converter
-implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    // Retrofit with Moshi Converter
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
 
 Many third party libraries including Retrofit2 use Java 8 language features. The Android Gradle plugin provides built-in support for using certain Java 8 language features.
-To use the built-in features, you need the following code in your module's build.gradle fil
+To use the built-in features, you need the following code in your module's build.gradle
 
-android {
-  ...
+    android {
+      ...
 
-  compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-  }
-  
-  kotlinOptions {
-    jvmTarget = '1.8'
-  }
-}
+      compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+      }
+
+      kotlinOptions {
+        jvmTarget = '1.8'
+      }
+    }
 
 **Parse the JSON response with Moshi**
 https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-getting-data-internet#7
 
 There's an external library called Moshi, which is an Android JSON parser that converts a JSON string into Kotlin objects. Retrofit has a converter that works with Moshi, so it's a great library for your purposes here.
 Open build.gradle (Module: app).
-// Moshi
-implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
 
-// Retrofit with Moshi Converter
-implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    // Moshi
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
+
+    // Retrofit with Moshi Converter
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
 
 **Internet Permissions**
-Open manifests/AndroidManifest.xml. 
+Open manifests/AndroidManifest.xml.
 Add this line just before the <application> tag:
 
-<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 **JSON to Kotlin Data Class**
 Install Plugin and follow tutorial
@@ -186,9 +194,9 @@ https://www.jsonschemavalidator.net/
 
 **JSON Annotation**
 @Json Annotation
-Sometimes the key names in a JSON response can make confusing Kotlin properties, or may not match recommended coding style—for example, in the JSON file the img_src key uses an underscore, 
+Sometimes the key names in a JSON response can make confusing Kotlin properties, or may not match recommended coding style—for example, in the JSON file the img_src key uses an underscore,
 whereas Kotlin convention for properties use upper and lowercase letters ("camel case").
 
-To use variable names in your data class that differ from the key names in the JSON response, 
-use the @Json annotation. 
+To use variable names in your data class that differ from the key names in the JSON response,
+use the @Json annotation.
 In this example, the name of the variable in the data class is imgSrcUrl. The variable can be mapped to the JSON attribute img_src using @Json(name = "img_src").
