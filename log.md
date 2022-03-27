@@ -1,12 +1,12 @@
 # 100 Days Of Code (Kotlin) - Log
 
-## Day 45: March 25th 2022
+## Day 46: March 25th 2022
 **Today's Progress**:
 Today i started Unit 4: Connect to the Internet (Retrofit and Coil)
 - Pathway 1 - Introduction to Co-routines (Concurrency and Multithreading)
 - Parse the JSON response from the web service into the app's LiveData objects with the Moshi library
 
-This was a good refresher in terms of setting up the API. 
+This was a good refresher in terms of setting up the API.
 
 
 ## Day 45: March 24th 2022
@@ -14,11 +14,11 @@ This was a good refresher in terms of setting up the API.
 Today i finished the Lunch Tray App Test. This was a great practical test as it had alot of architecture components and some complex logic.The instructions were missing some important parts to get the tests to pass but i managed to work it out.  
 - I will use this project as reference
 - Topics included; Navigation, Shared Viewmodel, Databinding, Tests
-- The test in this package are really good to use as reference. 
+- The test in this package are really good to use as reference.
 
 
 ## BREAK FROM CODING (4th March - 23rd March)
-During this time 
+During this time
 - I returned back to the UK from Mexico
 - Needed to complete life admin tasks and settle back in to a normal routine
 - Also spent this time applying for jobs in Android
@@ -29,9 +29,9 @@ During this time
 **Today's Progress**:
 Not been able to focus on coding as i didn't have stable internet connection. I have now moved to a better place with better wifi (Mexico)
 
-Learning lesson - this codelab was created in eclipse and needed to be converted to gradle. When i downloaded the project and opened it using android studio it did not compile.  Here is the 
+Learning lesson - this codelab was created in eclipse and needed to be converted to gradle. When i downloaded the project and opened it using android studio it did not compile.  Here is the
 learning lesson, instead of open use 'Import Project', this will convert the project for you!!
-I was stuck on this problem previusly for 3 days trying to compile this code lab. 
+I was stuck on this problem previusly for 3 days trying to compile this code lab.
 
 Codelab for LunchTray App
 https://developer.android.com/codelabs/basic-android-kotlin-training-project-lunch-tray?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-project-lunch-tray#2
@@ -51,17 +51,17 @@ Tried downloading codelab for lunch-tray app but not working correctly. Need to 
 
 Codelab for Cupcake App (different to fundamentals)
 https://developer.android.com/codelabs/basic-android-kotlin-training-shared-viewmodel?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-shared-viewmodel#6
-- The provided code did not work - so i made my own project and carried the resources over. This was simplier than trying to fix the outdated code. 
+- The provided code did not work - so i made my own project and carried the resources over. This was simplier than trying to fix the outdated code.
 
 The process was same as previous cupcake up the difference being the specific viewmodel for an shared viewmodel (activityViemodel)
-Integrating the live data with listener bindings (onclick) was also pretty easy. 
+Integrating the live data with listener bindings (onclick) was also pretty easy.
 
 
 Codelab - Navigation and BackStack Cupcake app
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#1
--  Implement Up button behavior using Navigation and custom behavior 
+-  Implement Up button behavior using Navigation and custom behavior
 - Custom behaviour included using popUpOf (take off backstack) and popInclusiveTo (going back to the first fragment)
-- Adding intent to send via email 
+- Adding intent to send via email
 
 
 ## Day 41: February 15th 2022
@@ -79,29 +79,29 @@ Today I working with the unscrambler app
 .
 **Today's Progress**:
 Today I worked on a new app - Unscrambller Word App.
-This code lab was good for adding 
-- a Viewmodel 
+This code lab was good for adding
+- a Viewmodel
 - a Alert Dialogue
 - going over fragment lifecycle.  
 
-I couldn't complete the code lab in one sitting as my internet connection was bad. 
+I couldn't complete the code lab in one sitting as my internet connection was bad.
 
-Codelab - Unscrambled App 
+Codelab - Unscrambled App
 
 ## Day 39: February 11th 2022
 .
 **Today's Progress**:
-Today i finished the modified word app (Word App Nav) and now will work on running tests on the program. 
+Today i finished the modified word app (Word App Nav) and now will work on running tests on the program.
 - Testing this app is now different from testing navigation without the use of navigation components. So different test libraries are now required.
 - Really usefeul codelab for understanding Test for Fragments and how they differ from Activities
-- Use the @Before and @After to set up/tear down repetive code you need to repeat for every test. 
+- Use the @Before and @After to set up/tear down repetive code you need to repeat for every test.
 - Use @BeforeCLass and @AfterClass (require to be in a companion object and to execute code only once. @BeforeClass runs once before anything in the class runs and @AfterClass runs once after everything else in the class has run.
-- Methods annotated with @BeforeClass and @AfterClass must be placed in a companion object and annotated with @JvmStatic. 
+- Methods annotated with @BeforeClass and @AfterClass must be placed in a companion object and annotated with @JvmStatic.
 - When doing this codelab the test only passes when you use a older version of androidTestImplementation 'androidx.navigation:navigation-testing:2.3.5'
-- Also the test does not work if you reference mainActivity for setting the appbar title. 
+- Also the test does not work if you reference mainActivity for setting the appbar title.
 
-Learnt 
-About branching on git and how to save different codes in different branches. This will help organise my portfolio alot better instead of uploading various projects. 
+Learnt
+About branching on git and how to save different codes in different branches. This will help organise my portfolio alot better instead of uploading various projects.
 
 
 ## Day 38: February 9th 2022
@@ -110,32 +110,32 @@ About branching on git and how to save different codes in different branches. Th
 Today I continued to work on the modified word app
 - One problem i came across was setting the title of the appbar that appears in a fragment
 - This is easy to do on activity as you use the built in reference label 'title =' but for fragements you need to use an alternative approach'
-- You can either do this in code using 
+- You can either do this in code using
         (activity as MainActivity).supportActionBar?.title =getString(R.string.detail_prefix) + " " + letterId
-		if you use above you might find it difficult to test fragment using navigation compenents. 
+		if you use above you might find it difficult to test fragment using navigation compenents.
 - or set it in the navigation XML file by adding a string and then adding a label with the navigation studio. Use the parameter passed in the safeargs.
      <string name="word_list_fragment_label">Words That Start With {letter}</string>
-	 letter is the safeargs argument passed in from the previous fragment. 
+	 letter is the safeargs argument passed in from the previous fragment.
 
 ## Day 37: February 8th 2022
 
 **Today's Progress**:
 Today i was working on navigation components
-- I modified the word app to use navigation components instead of multiple activity screens. 
-- This involved refractoring the app e.g swapping out intents (between activities) for safeargs arguments. 
+- I modified the word app to use navigation components instead of multiple activity screens.
+- This involved refractoring the app e.g swapping out intents (between activities) for safeargs arguments.
 
 Note: Studying whilst in Mexico and my laptop decided to break. It is still usuable but hanging off one screen hinge and the bottom righter corner of the screen is cracked.  
 
 
 
 ## BREAK FROM CODING (18th January - 8th February)
-During this time 
+During this time
 - I was updating my CV
 - Updating my LinkedIn
-- Learning and researching techinical interview questions. 
+- Learning and researching techinical interview questions.
 
 
-## Day 37: January 17th 2022 
+## Day 37: January 17th 2022
 
 **Today's Progress**:
 
