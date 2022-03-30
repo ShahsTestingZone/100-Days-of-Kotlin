@@ -200,3 +200,33 @@ whereas Kotlin convention for properties use upper and lowercase letters ("camel
 To use variable names in your data class that differ from the key names in the JSON response,
 use the @Json annotation.
 In this example, the name of the variable in the data class is imgSrcUrl. The variable can be mapped to the JSON attribute img_src using @Json(name = "img_src").
+
+**Binding Adapters **
+ Binding Adapters are annotated methods used to create custom setters for custom properties of your view.
+
+Usually when you set an attribute in your XML using the code: android:text="Sample Text". 
+The Android system automatically looks for a setter with the same name as the text attribute, 
+which is set by the setText(String: text) method. 
+The setText(String: text) method is a setter method for some views provided by the Android Framework. 
+Similar behavior can be customized using the binding adapters; you can provide a custom attribute and custom logic that will be called by the Data binding library.
+
+https://developer.android.com/codelabs/basic-android-kotlin-training-internet-images?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-internet-images#2
+
+Example:
+
+To do something more complex than simply calling a setter on the Image view, that sets an drawable image. 
+Consider loading images off the UI thread (main thread), from the internet. First, choose a custom attribute to assign the image to an ImageView. 
+In the following example it is imageUrl.
+
+			<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:imageUrl="@{product.imageUrl}"/>
+	
+			@BindingAdapter("imageUrl")
+			fun bindImage(imgView: ImageView, imgUrl: String?) {
+			imgUrl?.let {
+				// Load the image in the background using Coil.
+				}
+			}
+

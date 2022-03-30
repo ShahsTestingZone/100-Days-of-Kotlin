@@ -1,9 +1,19 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 47: March 29th 2022
+**Today's Progress**:
+Today i started Unit 4: Load and display images from the internet (Coil)
+- Pathway 2 - Using Coil to display images. 
+- How to use the Coil library to load and display an image from a web URL.
+- How to use a RecyclerView and a grid adapter to display a grid of images.
+- How to handle potential errors as the images download and display.
+- Add a loading animation and error icon to the app.
+
 ## Day 46: March 25th 2022
 **Today's Progress**:
-Today i started Unit 4: Connect to the Internet (Retrofit and Coil)
+Today i started Unit 4: Connect to the Internet (Retrofit)
 - Pathway 1 - Introduction to Co-routines (Concurrency and Multithreading)
+- Pathway 2 - Get data from the internet
 - Parse the JSON response from the web service into the app's LiveData objects with the Moshi library
 
 This was a good refresher in terms of setting up the API.
@@ -432,7 +442,7 @@ Today I focused on section 8.2:  Loading and displaying images from the internet
 - I implement Glide into the project
 - I updated the OverView-ViewModel class to use live data for the parsed JSON Objects
 - I updated the res/layout/fragment_overview to bind the textView with the ViewModel
-- I created a binding adapter to pass to include in the xml file.
+- I created a binding adapter (Binding Adapters) to pass to include in the xml file.
 
 I still need to complete this lab and will finish it tmw.
 
@@ -494,7 +504,7 @@ Today I focused on section 7.3:  GridLayout and RecyclerView
 - I replaced the list of sleep data displayed by the RecyclerView in the app with a grid of sleep data.
 - I learnt how to use a different LayoutManager to change how your data is displayed in the RecyclerView by implementing the layout manager programmatically
 - I update the list_item_sleep_night.xml and removed the textview as we were using a different viewholder pattern/design
-- I updated the BindingApater util class to change into a companion object and used the @JvmStatic notation to resolve new runtime error that was stopping compliation
+- I updated the Binding Adapter (Binding Adapter within a class) util class to change into a companion object and used the @JvmStatic notation to resolve new runtime error that was stopping compliation
 
 Surprisingly this was an easy transtion from a LinerLayout to a Grid Layout. Very small changes where made the most important being bullet point three.
 
