@@ -1,5 +1,21 @@
 # 100 Days Of Code (Kotlin) - Log
 
+
+## Day 48: April 8th 2022
+**Today's Progress**:
+Today i started Unit 4: Test Network Requests
+- Pathway 2 - Test Network Requests
+- Ho to unit test network requests
+- How to store resources for tests.
+- How to mock API responses for testing.
+- How to test Retrofit API services.
+
+This was a very useful codelab in learning about mockWebServer and testing network calls. 
+
+This was a very basic but went over the core parts. the test failed in the end and i had to find the solution to make it work.
+
+The Json test file was not correct and was missing some values. Took 1 hour to find a solution. 
+
 ## Day 47: March 29th 2022
 **Today's Progress**:
 Today i started Unit 4: Load and display images from the internet (Coil)

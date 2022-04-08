@@ -25,7 +25,31 @@ https://developer.android.com/codelabs/android-basics-kotlin-test-navigation-com
 General Test (Base Test, Menu Contents, Navigation, Order Functionality)
 Use the Lunch Tray App as reference, as it has some well written test in there for different situations.
 
+*How to Unit Test Network Request*
+When testing how an app handles retrieving data from an API, it's always best to provide our own data so we can be sure what the data should look like.
+Also, relying on a real network call subjects us to failures due to network connectivity or network speed, which can make our tests inconsistent.
+https://developer.android.com/codelabs/android-basics-kotlin-test-network-request?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-test-network-request#0
 
+First create and set up a test directory
+https://developer.android.com/codelabs/android-basics-kotlin-test-network-request?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-test-network-request#1
+
+To be able to access files in this resource directory, the test resource directory needs to be explicitly specified as a "source" directory in the build file. Add the following line:
+app/build.gradle
+
+		android {
+			...
+			sourceSets {
+			   test.resources.srcDirs += 'src/test/res'
+			}
+		}
+
+
+		//Test Dependencies
+			testImplementation 'junit:junit:4.12'
+			testImplementation "androidx.arch.core:core-testing:2.1.0"
+			testImplementation "com.squareup.okhttp3:mockwebserver:4.9.1"
+	
+	
 ===========================================================================================================================================
 
 **Change the app Icon/ Theme / Style **
