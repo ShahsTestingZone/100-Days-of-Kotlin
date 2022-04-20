@@ -1,5 +1,16 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 49: April 20th 2022
+**Today's Progress**:
+Reason for break 
+	- Ramadan started on the 1st April and im struggling to find energy to focus on coding. 
+	- I also need to focus on finding any job to tie me over financially. 
+	- During that time I spent effort doing applying for jobs and doing interview prep.
+
+Today i started Unit 4: Test Network Requests
+	- I re-did this codelab again to try and build momentum and motivation to start coding again. 
+	- Todays codelab was a good refresher and will I will only focus on doing an hour every day. 
+	
 
 ## Day 48: April 8th 2022
 **Today's Progress**:
@@ -14,7 +25,7 @@ This was a very useful codelab in learning about mockWebServer and testing netwo
 
 This was a very basic but went over the core parts. the test failed in the end and i had to find the solution to make it work.
 
-The Json test file was not correct and was missing some values. Took 1 hour to find a solution. 
+The Json test file was not correct and was missing some values. Took 1 hour to find a solution. I also did this for a different project than it was intented hence the error with json file. 
 
 ## Day 47: March 29th 2022
 **Today's Progress**:
