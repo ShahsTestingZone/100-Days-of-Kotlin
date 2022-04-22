@@ -1,5 +1,32 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 51: April 22nd 2022
+**Today's Progress**:
+Today i started Unit 4: Amphibians App Test Project
+
+This was simple project only implementing the API Service and updating the binding variables in xml layout to use custom logic. 
+
+The app used a recycler view and had alot of the logic already implement. 
+There are a couple of variations to this project. 
+
+MarsPhotoV2 - Found in Android Basics - simple recycler view that uses binding adapters to display images in viewholders (grid layout)
+Amphibians- Found in Android Basics - Recycler view with text that then goes onto detail
+Mars Realestate part 3 - Found in 100 days of Kotlin(Fundamentals Course) - App has more logic and features where it applies filters on top of the imageview. This one is probably more advanced to do 
+
+codelab
+https://developer.android.com/codelabs/basic-android-kotlin-training-project-amphibians?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-project-amphibians#0
+
+## Day 50: April 21st 2022
+**Today's Progress**:
+Today i started Unit 4: Debug and Breakpoints
+	- How to attach the debugger to your running app.
+	- Use breakpoints to pause a running app and inspect the code one line at a time.
+	- Add conditional expressions to breakpoints to save time debugging.
+	- Add variables to the Watches pane to aid with debugging.
+	
+Codelab
+https://developer.android.com/codelabs/basic-android-kotlin-training-debugging-with-breakpoints?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-debugging-with-breakpoints#0
+
 ## Day 49: April 20th 2022
 **Today's Progress**:
 Reason for break 
@@ -7,10 +34,14 @@ Reason for break
 	- I also need to focus on finding any job to tie me over financially. 
 	- During that time I spent effort doing applying for jobs and doing interview prep.
 
-Today i started Unit 4: Test Network Requests
+Today i started Unit 4: Test Network Requests (can't find this code lab so keep for future reference)
 	- I re-did this codelab again to try and build momentum and motivation to start coding again. 
 	- Todays codelab was a good refresher and will I will only focus on doing an hour every day. 
-	
+
+Project MarsPhotV2
+Codelab
+https://developer.android.com/codelabs/android-basics-kotlin-test-network-request?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-test-network-request#0
+
 
 ## Day 48: April 8th 2022
 **Today's Progress**:
@@ -27,6 +58,11 @@ This was a very basic but went over the core parts. the test failed in the end a
 
 The Json test file was not correct and was missing some values. Took 1 hour to find a solution. I also did this for a different project than it was intented hence the error with json file. 
 
+Project MarsRealEstate Glide (Fundamentals)
+codelab
+https://developer.android.com/codelabs/android-basics-kotlin-test-network-request?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-basics-kotlin-test-network-request#0
+
+
 ## Day 47: March 29th 2022
 **Today's Progress**:
 Today i started Unit 4: Load and display images from the internet (Coil)
@@ -36,6 +72,10 @@ Today i started Unit 4: Load and display images from the internet (Coil)
 - How to handle potential errors as the images download and display.
 - Add a loading animation and error icon to the app.
 
+Codelab
+https://developer.android.com/codelabs/basic-android-kotlin-training-internet-images?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-internet-images#0
+
+
 ## Day 46: March 25th 2022
 **Today's Progress**:
 Today i started Unit 4: Connect to the Internet (Retrofit)
@@ -44,6 +84,11 @@ Today i started Unit 4: Connect to the Internet (Retrofit)
 - Parse the JSON response from the web service into the app's LiveData objects with the Moshi library
 
 This was a good refresher in terms of setting up the API.
+
+Project MarsPhoto
+
+Codelab
+https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-4-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-getting-data-internet#10
 
 
 ## Day 45: March 24th 2022
