@@ -1,5 +1,18 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 52: April 23rd 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+- Pathway 1 - Introduction to SQL, Room and Flow.
+- SQL basics
+
+I completed the basics for learning the simple commands for creating, updating, deleting and inserting values into a database. 
+I also learnt some basic functions like COUNT, DISTINCT, SUM
+
+Project: SQL Basics
+Codelab
+https://developer.android.com/codelabs/basic-android-kotlin-training-sql-basics?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-sql-basics#0
+
 ## Day 51: April 22nd 2022
 **Today's Progress**:
 Today i started Unit 4: Amphibians App Test Project
