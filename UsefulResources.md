@@ -253,4 +253,35 @@ In the following example it is imageUrl.
 				// Load the image in the background using Coil.
 				}
 			}
+**Room Database**
+CREATE THE ENTITY
+Creating the data class for table - create a data class
+
+		data class Schedule(
+		)
+		
+- Data tables should have a primary key to uniquely identify each row. The first property you'll add to the Schedule class is an integer to represent a unique id. Add a new property and mark it with the @PrimaryKey annotation. This tells Room to treat this property as the primary key when new rows are inserted.
+@PrimaryKey val id: Int
+
+- Add a column for the name of the bus stop. The column should be of type String. For new columns, you'll need to add a @ColumnInfo annotation to specify a name for the column. Typically, SQL column names will have words separated by an underscore, as opposed to the lowerCamelCase used by Kotlin properties. For this column, we also don't want the value to be null , so you should mark it with the @NonNull annotation.
+@NonNull @ColumnInfo(name = "stop_name") val stopName: String,
+
+Note: In SQL, columns can have null values by default and need to be explicitly marked as non null if you want otherwise. This is the opposite of how things work in Kotlin, where values can't be null by default.
+
+- Arrival times are represented in the database using integers. This is a Unix timestamp that can be converted into a usable date. While different versions of SQL offer ways to convert dates, for your purposes, you'll stick with Kotlin date formatting functions. Add the following @NonNull column to the model class.
+@NonNull @ColumnInfo(name = "arrival_time") val arrivalTime: Int
+
+Finally, for Room to recognize this class as something that can be used to define database tables, you need to add an annotation to the class itself. Add @Entity on a separate line before the class name.
+
+		@Entity
+		data class Schedule(
+		   @PrimaryKey val id: Int,
+		   @NonNull @ColumnInfo(name = "stop_name") val stopName: String,
+		   @NonNull @ColumnInfo(name = "arrival_time") val arrivalTime: Int
+		)
+Use thise codelab as reference as there is quite alot to do
+https://developer.android.com/codelabs/basic-android-kotlin-training-intro-room-flow?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-intro-room-flow#6
+
+
+**NEW THINGS HERE**
 

@@ -1,5 +1,33 @@
 # 100 Days Of Code (Kotlin) - Log
 
+
+## Day 53: April 24th 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+- Pathway 1 - Introduction to SQL, Room and Flow.
+- Introduction to Room and Flow
+
+	- Represent database tables as Kotlin objects (entities).
+	- Define the database class to use Room in the app, and pre-populate a database from a file.
+	- Define the DAO class and use SQL queries to access the database from Kotlin code.
+	- Define a view model to allow the UI to interact with the DAO.
+	- How to use ListAdapter with a recycler view.
+	- The basics of Kotlin flow and how to use it to make the UI respond to changes in the underlying data.
+
+This project was good for going over the basics but the way they explain it isn't that great compared to the fundamentals course. Make it sound more complicated. 
+One thing to note about the project is the use of Assets (Android Resource Directory), this allows you to add a prepopulated database with the app. 
+
+So FLOW is similar to live data in the sense that it updates recycler view everytime a change happen. 
+- The main difference is that it periodically makes calls to the database to update the list
+- where as Live data notices a change via its observers and then updates the list. 
+Flow might be more performance intensive. This is my understanding of it. 
+
+Project: SQL Basics
+Codelab
+https://developer.android.com/codelabs/basic-android-kotlin-training-intro-room-flow?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-intro-room-flow#0
+
+
+
 ## Day 52: April 23rd 2022
 **Today's Progress**:
 Today i started Unit 5: Data persistence
