@@ -1,0 +1,121 @@
+
+Adding dependencies
+
+======================================================================================
+##Testing Code##
+
+add below to dependencies build.grade(Module)
+
+defaultConfig {
+testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+}
+
+dependencies {
+// JUnit 
+testImplementation 'junit:junit:4.+'
+androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+
+androidTestImplementation'androidx.test:runner:1.4.0'
+androidTestImplementation'androidx.test:rules:1.4.0'
+
+// Espresso 
+androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+//Recycler view testing - Espresso
+androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
+}
+
+
+##Testing Navigation Components
+Testing navigation components requires some specific Gradle dependencies. We will also include a dependency that lets us test fragments in a 
+very specific way. Navigate to your app module's build.gradle file and add the following dependency:
+
+androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
+androidTestImplementation 'androidx.navigation:navigation-testing:2.3.5'
+
+debugImplementation 'androidx.fragment:fragment-testing:1.3.6'
+   
+##Testing Network Calls
+//Test Dependencies
+    testImplementation 'junit:junit:4.12'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "com.squareup.okhttp3:mockwebserver:4.9.1"
+	
+	/This dependency lets us create a mock server. Essentially, the mock server intercepts network requests and reroutes them to return the mock data that we have defined.
+	
+===========================================================================================
+
+
+##Multi Dex## when your app has more than 8000 methods - mainly due to android libraries. 
+ defaultConfig {
+implementation 'com.android.support:multidex:1.0.3'
+}
+
+dependencies {
+multiDexEnabled true
+}
+
+=======================================================================================================
+##Jetpack Navigation Components
+In the project-level build.gradle file, in buildscript > ext,  set the nav_version equal to 2.3.1.
+
+In module.gradle file add to dependencies
+implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+##Safe Args between Nagivation graph##
+In module.gradle
+classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+In build.gradle 
+plugins {
+    
+    id 'androidx.navigation.safeargs.kotlin'
+}
+=========================================================================================================
+##Jetpack ViewModel
+add this is in the module gradle file
+// ViewModel
+implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+============================================================================================================
+##Jetpack LiveData
+add this in the module gradle file
+//LiveData
+implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+
+==============================================================================================================
+##Jetpack Databinding 
+In the build.gradle(Module) file, enable the dataBinding property under the buildFeatures section.
+buildFeatures {
+   dataBinding = true
+}
+
+To use data binding in any Kotlin project, you should apply the kotlin-kapt plugin. This step is already done for you in the build.gradle(Module) file.
+
+plugins {
+   id 'com.android.application'
+   id 'kotlin-android'
+   id 'kotlin-kapt'
+}
+
+===============================================================================================================
+## Coil Library (Image Loading Library)
+    // Coil
+    implementation "io.coil-kt:coil:1.1.1"
+
+================================================================================================================
+## Room Library 
+In the project-level build.gradle file, define the room_version in the ext block.
+
+		ext {
+		   room_version = '2.3.0'
+		}
+
+In the app-level build.gradle file, at the end of the dependencies list, add the following dependencies
+
+		implementation "androidx.room:room-runtime:$room_version"
+		kapt "androidx.room:room-compiler:$room_version"
+
+		// optional - Kotlin Extensions and Coroutines support for Room
+		implementation "androidx.room:room-ktx:$room_version"
