@@ -49,7 +49,9 @@ app/build.gradle
 			testImplementation "androidx.arch.core:core-testing:2.1.0"
 			testImplementation "com.squareup.okhttp3:mockwebserver:4.9.1"
 	
-	
+*Testing Room Database*	
+
+
 ===========================================================================================================================================
 
 **Change the app Icon/ Theme / Style **
@@ -151,7 +153,53 @@ https://developer.android.com/codelabs/basic-android-kotlin-training-shared-view
     println("entering getValue() at ${time()}")
 
     Output: entering getValue() at 17:44:52.311
+**Currency Formatter based on local**
+tip = amount in int
 
+val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+
+Pass formatted tip to widget view. 
+
+** Adding functions to format Data Classes**
+
+/**
+ * Data class for menu items
+ */
+data class MenuItem(
+    val name: String,
+    val description: String,
+    val price: Double,
+    val type: Int
+) {
+    /**
+     * Getter method for price.
+     * Includes formatting.
+     */
+    fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance().format(price)
+}
+
+This might be in your view model. 
+private val _entree = MutableLiveData<MenuItem?>()
+    val entree: LiveData<MenuItem?> = _entree
+	
+Then in your XML you can use this
+<TextView
+                android:id="@+id/entree_price"
+                style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/entree_selection"
+                tools:text="$7.00"
+                android:text='@{viewModel.entree.getFormattedPrice()}'/>
+
+**Transformation mapping for currency based on local**
+
+The difference between the above and below is that menuItem is a list of variables where subtotal is one value and we can convert it to
+currency format straight away.
+
+  private val _subtotal = MutableLiveData(0.0)
+    val subtotal: LiveData<String> = Transformations.map(_subtotal) {
+        NumberFormat.getCurrencyInstance().format(it)
+    }
 
 ** Implement Up button behaviour using Navigation Controller**
 https://developer.android.com/codelabs/basic-android-kotlin-training-navigation-backstack?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-3-pathway-4%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-navigation-backstack#2
@@ -282,5 +330,29 @@ Finally, for Room to recognize this class as something that can be used to defin
 Use thise codelab as reference as there is quite alot to do
 https://developer.android.com/codelabs/basic-android-kotlin-training-intro-room-flow?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-intro-room-flow#6
 
+Better codelab
+https://developer.android.com/codelabs/basic-android-kotlin-training-persisting-data-room?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-persisting-data-room#4
+
+**code to hide keyboard**
+
+ override fun onDestroyView() {
+        super.onDestroyView()
+        // Hide keyboard.
+        val inputMethodManager = requireActivity().getSystemService(INPUT_METHOD_SERVICE) as
+                InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(requireActivity().currentFocus?.windowToken, 0)
+        _binding = null
+    }
+	
+**Android X Releases Page**
+
+https://developer.android.com/jetpack/androidx/versions
+
 **NEW THINGS HERE**
 
+
+**NEW THINGS HERE**
+
+**NEW THINGS HERE**
+
+**NEW THINGS HERE**

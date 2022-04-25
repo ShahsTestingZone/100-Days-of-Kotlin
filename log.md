@@ -1,6 +1,25 @@
 # 100 Days Of Code (Kotlin) - Log
 
 
+## Day 54: April 25th 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+Pathway 2 - Use Room for data persistence
+
+	- How to create and interact with the SQLite database using the Room library.
+	- How to create an entity, DAO, and database classes.
+	- How to use a data access object (DAO) to map Kotlin functions to SQL queries.
+
+This codelab went over the way to create a database using the flow method. The project is only meant to show how the Data Access Object is updating the database
+The recycler view was not implemented. Instead we can see the databse working by using App Inspection and running a SQL query SELECT * FROM tablename
+
+Project - Inventory App
+
+Codelab - Persist data with room. 
+https://developer.android.com/codelabs/basic-android-kotlin-training-persisting-data-room?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-persisting-data-room#0
+
+
+
 ## Day 53: April 24th 2022
 **Today's Progress**:
 Today i started Unit 5: Data persistence
@@ -138,6 +157,9 @@ Today i finished the Lunch Tray App Test. This was a great practical test as it 
 - I will use this project as reference
 - Topics included; Navigation, Shared Viewmodel, Databinding, Tests
 - The test in this package are really good to use as reference.
+
+Good for adding functions to data class to format certain values. 
+
 
 
 ## BREAK FROM CODING (4th March - 23rd March)
@@ -383,6 +405,7 @@ val formattedNumber: String = NumberFormat.getCurrencyInstance.format(Int)
 
 #MaterialDesign(Part2)   #ViewBinding(Part1) #InstumentTest(Part2) #ChangeIcon(part2) #ChangeTheme/Style(Part1)
 
+Project - Tipping Calculator
 
 
 ## Day 33: January 11th 2022
