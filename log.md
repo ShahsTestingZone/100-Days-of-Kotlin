@@ -1,5 +1,20 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 55: April 26th 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+Pathway 2 - Read and Update data with Room
+
+	- Implement the recycler view, adapter and viewholder. 
+	- Update the viewmodel with functions to CRUD from database. 
+	- Add functionality for the Sell button. 
+	
+	
+Project - Inventory App
+
+Codelab - Persist data with room. 
+https://developer.android.com/codelabs/basic-android-kotlin-training-update-data-room?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-update-data-room#1
+
 
 ## Day 54: April 25th 2022
 **Today's Progress**:
