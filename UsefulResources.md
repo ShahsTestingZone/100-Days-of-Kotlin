@@ -348,10 +348,17 @@ https://developer.android.com/codelabs/basic-android-kotlin-training-persisting-
 
 https://developer.android.com/jetpack/androidx/versions
 
-**NEW THINGS HERE**
+**Way to round numbers**
 
+val price = "%.2f".format(item.itemPrice)
 
-**NEW THINGS HERE**
+**Bindind to slowly buffer input **
+
+   binding.apply {
+       itemName.setText(item.itemName, TextView.BufferType.SPANNABLE)
+       itemPrice.setText(price, TextView.BufferType.SPANNABLE)
+       itemCount.setText(item.quantityInStock.toString(), TextView.BufferType.SPANNABLE)
+   }
 
 **NEW THINGS HERE**
 

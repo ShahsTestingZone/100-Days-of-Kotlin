@@ -1,5 +1,32 @@
 # 100 Days Of Code (Kotlin) - Log
 
+
+## Day 56: April 27th 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+Pathway 2 - Read and Update data with Room
+
+	- I worked on the final parts for the Inventory App 
+	- Implented the delete button. 
+	
+	Interesting example of how to update the title for a fragment using navgraph and passing arguments. Take a look at the nav graph
+	for addItemFragement. Check XML in code layout and you will see it uses the 'title' arguments its expecting and feeds it back into label. 
+	
+	 <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.inventory.AddItemFragment"
+        android:label="{title}"
+
+Also
+	- To consume the Flow data as a LiveData value, use the asLiveData() function.
+	- The copy() function is provided by default to all the instances of data classes. It lets you copy an object and change some of its properties, while keeping the rest of its properties unchanged.
+		
+Project - Inventory App
+
+Codelab - Persist data with room. 
+https://developer.android.com/codelabs/basic-android-kotlin-training-update-data-room?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-update-data-room#1
+
+
 ## Day 55: April 26th 2022
 **Today's Progress**:
 Today i started Unit 5: Data persistence
