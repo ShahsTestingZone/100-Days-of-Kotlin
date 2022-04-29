@@ -42,6 +42,16 @@ data class NetworkVideo(
 		
 Then two functions were created to map to databse and domain. 
 
+Finally interms of the datbinding to the xml resource there was a new thing i've never seen before 
+		 <ProgressBar
+					android:id="@+id/loading_spinner"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:isNetworkError = "@{safeUnbox(viewModel.eventNetworkError)}"
+					app:playlist = "@{viewModel.playlist}"
+
+is Network error is a checkbox, so you need to uncheck first and then add the boolean value. as app: isNetworkError can take a null which we don't want. 
+
 Overall the respository was easy to implement but understanding the code was a little difficult at the beginning as we were converting a room project to a repository pattern. 
 
 Project - DevByteVideo
