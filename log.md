@@ -1,6 +1,27 @@
 # 100 Days Of Code (Kotlin) - Log
 
 
+
+## Day 57: April 29th 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+Pathway 2 - Repository Pattern
+
+	- How to implement a repository to abstract an app's data layer from the rest of the app.
+	- How to load cached data using a repository.
+	- Use a repository to abstract the data layer, and integrate the repository class with the ViewModel.
+	- Display data from the offline cache.
+
+This was a good project that used an interesting extension function(Truncate). This made the text smaller for the view widget.
+The binding adapter was also useful, seeing how they bind the image icon for video to viewimage widget. 
+Overall the respository was easy to implement but understanding the code was a little difficult as we were converting a room project to a repository pattern. 
+
+Project - DevByteVideo
+
+Codelab - Repository Pattern 
+https://developer.android.com/codelabs/basic-android-kotlin-training-repository-pattern?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-repository-pattern#0
+
+
 ## Day 56: April 27th 2022
 **Today's Progress**:
 Today i started Unit 5: Data persistence
