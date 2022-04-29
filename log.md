@@ -14,7 +14,35 @@ Pathway 2 - Repository Pattern
 
 This was a good project that used an interesting extension function(Truncate). This made the text smaller for the view widget.
 The binding adapter was also useful, seeing how they bind the image icon for video to viewimage widget. 
-Overall the respository was easy to implement but understanding the code was a little difficult as we were converting a room project to a repository pattern. 
+The other thing about this project it had three dataclasses (for parsing JSON and creating objects) that represented the same thing but in different formats. 
+ - For example there was a domain class, the domain objects are plain Kotlin data classes that represent the things in our app. These are the objects that should be displayed on screen, or manipulated by the app.
+ - There was a Database class, for objects that are mapped to the database and represent the video entities in the database. This also had an extension function to map to the domain class
+ - Finally there was the network class, these are for data objects that parse or prepare network calls. This also had two extension functions for coverting to database and domain objects
+ 
+ The final thing of interest is how they implemented the Moshi Json Factory whis was different to mars real estate app. Because of the format of the Json they used a different method 
+ for parsing the data. 
+ 
+  * This is to parse first level of our network result which looks like
+ *
+ * {
+ *   "videos": []
+ 
+See below 
+@JsonClass(generateAdapter = true)
+data class NetworkVideoContainer(val videos: List<NetworkVideo>)
+
+@JsonClass(generateAdapter = true)
+data class NetworkVideo(
+        val title: String,
+        val description: String,
+        val url: String,
+        val updated: String,
+        val thumbnail: String,
+        val closedCaptions: String?)
+		
+Then two functions were created to map to databse and domain. 
+
+Overall the respository was easy to implement but understanding the code was a little difficult at the beginning as we were converting a room project to a repository pattern. 
 
 Project - DevByteVideo
 
