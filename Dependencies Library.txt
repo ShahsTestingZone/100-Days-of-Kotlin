@@ -119,3 +119,11 @@ In the app-level build.gradle file, at the end of the dependencies list, add the
 
 		// optional - Kotlin Extensions and Coroutines support for Room
 		implementation "androidx.room:room-ktx:$room_version"
+		
+================================================================================================================
+## Preferences Datastore Library 	
+
+In the app-level build.gradle file, at the end of the dependencies list, add the following dependencies
+		
+		implementation "androidx.datastore:datastore-preferences:1.0.0"
+		implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"

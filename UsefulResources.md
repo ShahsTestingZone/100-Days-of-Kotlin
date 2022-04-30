@@ -360,6 +360,62 @@ val price = "%.2f".format(item.itemPrice)
        itemCount.setText(item.quantityInStock.toString(), TextView.BufferType.SPANNABLE)
    }
 
-**NEW THINGS HERE**
+**Implement Repository**
 
-**NEW THINGS HERE**
+Steps to implement a repository to feed into the database. 
+https://developer.android.com/codelabs/basic-android-kotlin-training-repository-pattern?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-repository-pattern#0
+
+
+**Moshi Factory**
+
+ The final thing of interest is how they implemented the Moshi Json Factory whis was different to mars real estate app. Because of the format of the Json they used a different method 
+ for parsing the data. 
+ 
+  * This is to parse first level of our network result which looks like
+ *
+ * {
+ *   "videos": []
+ 
+See below 
+@JsonClass(generateAdapter = true)
+data class NetworkVideoContainer(val videos: List<NetworkVideo>)
+
+@JsonClass(generateAdapter = true)
+data class NetworkVideo(
+        val title: String,
+        val description: String,
+        val url: String,
+        val updated: String,
+        val thumbnail: String,
+        val closedCaptions: String?)
+		
+Then two functions were created to map to databse and domain. 
+
+See Devbyte Project
+https://developer.android.com/codelabs/basic-android-kotlin-training-repository-pattern?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-repository-pattern#0
+
+
+**Preference Datastore**
+Preferences DataStore is ideal for small, simple datasets, such as storing login details, the dark mode setting, font size, and so on. 
+The DataStore is not suitable for complex datasets, such as an online grocery store inventory list, or a student database. 
+If you need to store large or complex datasets, consider using Room instead of DataStore.
+
+		implementation "androidx.datastore:datastore-preferences:1.0.0"
+		implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+
+** Swaping between grid layout and liner layout**
+
+Project: WordsApp 
+
+    private fun chooseLayout() {
+        when (isLinearLayoutManager) {
+            true -> {
+                recyclerView.layoutManager = LinearLayoutManager(context)
+                recyclerView.adapter = LetterAdapter()
+            }
+            false -> {
+                recyclerView.layoutManager = GridLayoutManager(context, 4)
+                recyclerView.adapter = LetterAdapter()
+            }
+        }
+    }
