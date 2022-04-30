@@ -1,6 +1,21 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 58: April 30th 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+Pathway 2 - Preferences Datastore
+ - How to add the Preference DataStore to your app.
+ -How to call the Datastore preferences in fragments
+ - How to redraw the options menu (toggle button) when the datastore stores preferences are initiated. 
 
+OnViewCreated
+// Redraw the menu
+           activity?.invalidateOptionsMenu()
+
+Project - Word App - Datastore
+
+Codelab - 
+https://developer.android.com/codelabs/basic-android-kotlin-training-preferences-datastore?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-preferences-datastore#0
 
 ## Day 57: April 29th 2022
 **Today's Progress**:
@@ -18,29 +33,7 @@ The other thing about this project it had three dataclasses (for parsing JSON an
  - For example there was a domain class, the domain objects are plain Kotlin data classes that represent the things in our app. These are the objects that should be displayed on screen, or manipulated by the app.
  - There was a Database class, for objects that are mapped to the database and represent the video entities in the database. This also had an extension function to map to the domain class
  - Finally there was the network class, these are for data objects that parse or prepare network calls. This also had two extension functions for coverting to database and domain objects
- 
- The final thing of interest is how they implemented the Moshi Json Factory whis was different to mars real estate app. Because of the format of the Json they used a different method 
- for parsing the data. 
- 
-  * This is to parse first level of our network result which looks like
- *
- * {
- *   "videos": []
- 
-See below 
-@JsonClass(generateAdapter = true)
-data class NetworkVideoContainer(val videos: List<NetworkVideo>)
 
-@JsonClass(generateAdapter = true)
-data class NetworkVideo(
-        val title: String,
-        val description: String,
-        val url: String,
-        val updated: String,
-        val thumbnail: String,
-        val closedCaptions: String?)
-		
-Then two functions were created to map to databse and domain. 
 
 Finally interms of the datbinding to the xml resource there was a new thing i've never seen before 
 		 <ProgressBar
