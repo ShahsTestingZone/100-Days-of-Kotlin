@@ -1,5 +1,17 @@
 # 100 Days Of Code (Kotlin) - Log
 
+## Day 59: May 1st 2022
+**Today's Progress**:
+Today i started Unit 5: Data persistence
+Pathway 2 - Project Forage app
+ - Update existing project and add persistence with Room by implementing an entity, DAO, ViewModel, and database class.
+
+Really good codelab for creating a room database with all the necessary steps. 
+Project - Forage App
+
+Codelab - 
+https://developer.android.com/codelabs/basic-android-kotlin-training-project-forage?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-5-pathway-2%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-project-forage#0
+
 ## Day 58: April 30th 2022
 **Today's Progress**:
 Today i started Unit 5: Data persistence
